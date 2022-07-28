@@ -27,7 +27,7 @@ public class KakaoLoginService {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append("grant_type=authorization_code");
             stringBuilder.append("&client_id=c524a7239cfdb94b1732cb913de178c9");
-            stringBuilder.append("&redirect_uri=http://192.168.50.73:8080/sushi/kakao/login");
+            stringBuilder.append("&redirect_uri=http://ec2-13-125-151-111.ap-northeast-2.compute.amazonaws.com:8080/sushi/kakao/login");
             stringBuilder.append("&code=" + code);
             bufferedWriter.write(stringBuilder.toString());
             bufferedWriter.flush();

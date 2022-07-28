@@ -39,7 +39,7 @@ public class UserController {
         String url = "https://kauth.kakao.com/oauth/authorize" +
                 "?response_type=code" +
                 "&client_id=c524a7239cfdb94b1732cb913de178c9" +
-                "&redirect_uri=http://13.125.151.111/sushi/kakao/login";
+                "&redirect_uri=http://ec2-13-125-151-111.ap-northeast-2.compute.amazonaws.com:8080/sushi/kakao/login";
         return "redirect:" + url;
     }
 
