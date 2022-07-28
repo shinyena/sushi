@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="book">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Book a <span>Table</span></h2>
+            <p>[[${info.notice}]]</p>
+        </div>
+
+        <form th:action="@{/sushi/register}" th:method="post" role="form" class="php-email-form">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>이메일</label>
+                    <input type="text" class="form-control" name="email" th:value="${email}" required>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>예약자</label>
+                    <input type="text" class="form-control" name="name" th:value="${name}" required>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>연락처</label>
+                    <input type="tel" class="form-control" name="phone" required>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>예약일</label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" name="rdate" readonly required>
+
+                        <div class="input-group-append">
+                            <span class="btn btn-outline-secondary datePicker bi bi-calendar3 d-flex align-items-center">
+                            </span>
+                        </div>
+                    </div>
+
+<!--                    <input type="hidden" class="form-control" name="rdate" readonly required>-->
+<!--                    <div class="datePicker"></div>-->
+
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>예약시간</label>
+                    <select class="form-control timeSelector" name="rtime" required>
+                        <option>선택</option>
+                        <option value="AM11">오전 11시</option>
+                        <option value="PM12">오후 12시</option>
+                        <option value="PM13">오후 13시</option>
+                        <option value="PM17">오후 17시</option>
+                        <option value="PM18">오후 18시</option>
+                        <option value="PM19">오후 19시</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group mt-3">
+                    <label>인원수</label>
+                    <input type="number" class="form-control" name="count" max="4" required>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label>요청사항</label>
+                <textarea class="form-control" name="message" rows="5"></textarea>
+            </div>
+            <br>
+            <div class="text-center">
+                <button type="submit" class="book-a-table-btn">예약 신청</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        $.getJSON("/sushi/date", function (result) {
+            $(".datePicker").datepicker({
+                startDate: '+1d',
+                datesDisabled: result,
+                daysOfWeekDisabled: [0]
+            }).on("changeDate", function () {
+                $("select option").removeAttr('disabled');
+
+                var chooseDate = $('.datePicker').datepicker('getFormattedDate')
+                $("input[name='rdate']").val(chooseDate);
+                var data = {
+                    rdate: chooseDate
+                }
+                console.log(data);
+
+
+                $.ajax({
+                    url: "/sushi/time",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "text",
+                    success: function (result) {
+                        console.log(result);
+                        $.each(JSON.parse(result), function (idx, dto) {
+                            $("select option[value='" + dto.rtime + "']").attr('disabled', true);
+                        });
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+
+</th:block>

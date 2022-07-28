@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
+        <h1 class="mt-4">관리자 정보 변경</h1>
+
+        <form th:action="@{/sushi/admin/information}" th:method="post">
+            <div class="form-group">
+                <label>관리자 아이디</label>
+                <input type="text" class="form-control" name="adminId" th:value="${dto.adminId}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>관리자 패스워드</label>
+                <input type="text" class="form-control" name="password" th:value="${dto.password}">
+            </div>
+
+            <div class="form-group">
+                <label>매장 위치</label>
+                <input type="text" class="form-control" name="location" th:value="${dto.location}">
+            </div>
+
+            <div class="form-group">
+                <label>오픈 시간</label>
+                <input type="text" class="form-control" name="open" th:value="${dto.open}">
+            </div>
+
+            <div class="form-group">
+                <label>휴무일</label>
+                <input type="text" class="form-control" name="close" th:value="${dto.close}">
+            </div>
+
+            <div class="form-group">
+                <label>매장 인스타그램</label>
+                <input type="text" class="form-control" name="instagram" th:value="${dto.instagram}">
+            </div>
+
+            <div class="form-group">
+                <label>매장 전화번호</label>
+                <input type="text" class="form-control" name="phone" th:value="${dto.phone}">
+            </div>
+            <div class="form-group">
+                <label>예약 안내사항</label>
+                <textarea class="form-control" name="notice" rows="5">[[${dto.notice}]]</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>공지사항1</label>
+                <input type="text" class="form-control" name="title1" th:value="${dto.title1}" placeholder="제목">
+                <textarea class="form-control" name="content1" rows="5" placeholder="내용">[[${dto.content1}]]</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>공지사항2</label>
+                <input type="text" class="form-control" name="title2" th:value="${dto.title2}" placeholder="제목">
+                <textarea class="form-control" name="content2" rows="5" placeholder="내용">[[${dto.content2}]]</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>공지사항3</label>
+                <input type="text" class="form-control" name="title3" th:value="${dto.title3}" placeholder="제목">
+                <textarea class="form-control" name="content3" rows="5" placeholder="내용">[[${dto.content3}]]</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-secondary">저장하기</button>
+
+
+        </form>
+
+    </th:block>
+</th:block>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
+        <h1 class="mt-4">Reservation Read Page</h1>
+
+        <form>
+            <div class="form-group">
+                <label>이메일</label>
+                <input type="text" class="form-control" name="email" th:value="${dto.email}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>예약자</label>
+                <input type="text" class="form-control" name="name" th:value="${dto.name}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>연락처</label>
+                <input type="tel" class="form-control" name="phone" th:value="${dto.phone}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>예약일</label>
+                <input type="date" class="form-control" name="rdate" th:value="${dto.rdate}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>예약시간</label>
+                <input type="text" class="form-control" name="rtime" th:value="${dto.rtime}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>인원수</label>
+                <input type="number" class="form-control" name="count" th:value="${dto.count}" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>요청사항</label>
+                <textarea class="form-control" name="message" rows="5" readonly>[[${dto.message}]]</textarea>
+            </div>
+
+            <a th:href="@{/sushi/admin/delete(rid=${dto.rid})}">
+                <button type="button" class="btn btn-danger">예약 취소</button>
+            </a>
+        </form>
+
+    </th:block>
+</th:block>
+

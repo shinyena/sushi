@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout/userIndex :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
+        <!-- ======= Hero Section ======= -->
+        <section id="hero">
+            <th:block th:replace = "sushi/fragment/hero :: hero"></th:block>
+        </section><!-- End Hero -->
+
+        <main id="main">
+            <!-- ======= Menu Section ======= -->
+            <section id="menu" class="menu">
+                <th:block th:replace = "sushi/fragment/menu :: menu"></th:block>
+            </section><!-- End Menu Section -->
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+                <th:block th:replace = "sushi/fragment/contact :: contact"></th:block>
+            </section><!-- End Contact Section -->
+
+        </main><!-- End #main -->
+    </th:block>
+</th:block>
+

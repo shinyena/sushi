@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="special">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Check your <span>Reservation</span></h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <ul class="nav nav-tabs flex-column">
+                    <li class="nav-item" th:each="dto, iter: ${dtoList}">
+                        <a class="nav-link listLink" data-bs-toggle="tab"
+                           th:value="${dto.rtime}"
+                           th:href="@{'#tab-' + ${iter.index}}">
+                            [[${dto.rdate}]], [[${dto.rtime}]]</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-8 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    <div class="tab-pane" th:each="dto, iter: ${dtoList}" th:id="|tab-${iter.index}|">
+                        <form class="php-email-form" th:action="@{/sushi/modify}" th:method="post">
+                            <input type="hidden" class="form-control" name="rid" th:value="${dto.rid}" readonly>
+                            <div class="row">
+                                <div class="col-lg-6 form-group mt-3">
+                                    <label>이메일</label>
+                                    <input type="text" class="form-control" name="email" th:value="${dto.email}"
+                                           readonly>
+                                </div>
+                                <div class="col-lg-6 form-group mt-3">
+                                    <label>예약자</label>
+                                    <input type="text" class="form-control" name="name" th:value="${dto.name}" required>
+                                </div>
+                                <div class="col-lg-6 form-group mt-3">
+                                    <label>연락처</label>
+                                    <input type="tel" class="form-control" name="phone" th:value="${dto.phone}"
+                                           required>
+                                </div>
+                                <div class="col-lg-4 col-md-6 form-group mt-3">
+                                    <label>예약일</label>
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" name="rdate" th:value="${dto.rdate}" readonly required>
+                                        <div class="input-group-append">
+                                        <span class="btn btn-outline-secondary datePicker bi bi-calendar3 d-flex align-items-center" th:data-date="${dto.rdate}">
+                                        </span>
+                                        </div>
+                                    </div>
+<!--                                    <input type="hidden" class="form-control" name="rdate" th:value="${dto.rdate}"-->
+<!--                                           readonly required>-->
+<!--                                    <div class="datePicker" th:data-date="${dto.rdate}"></div>-->
+                                </div>
+                                <div class="col-lg-6 form-group mt-3">
+                                    <label>예약시간</label>
+                                    <select class="form-control timeSelector" name="rtime">
+                                        <option value="AM11" th:selected="${dto.rtime}=='AM11'">오전 11시</option>
+                                        <option value="PM12" th:selected="${dto.rtime}=='PM12'">오후 12시</option>
+                                        <option value="PM13" th:selected="${dto.rtime}=='PM13'">오후 13시</option>
+                                        <option value="PM17" th:selected="${dto.rtime}=='PM17'">오후 17시</option>
+                                        <option value="PM18" th:selected="${dto.rtime}=='PM18'">오후 18시</option>
+                                        <option value="PM19" th:selected="${dto.rtime}=='PM19'">오후 19시</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 form-group mt-3">
+                                    <label>인원수</label>
+                                    <input type="number" class="form-control" name="count" max="4"
+                                           th:value="${dto.count}" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label>요청사항</label>
+                                <textarea class="form-control" name="message" rows="5">[[${dto.message}]]</textarea>
+                            </div>
+                            <br>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary">예약 수정</button>
+
+                                <a th:href="@{/sushi/delete(rid=${dto.rid})}">
+                                    <button type="button" class="btn btn-danger">예약 취소</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $.getJSON("/sushi/date", function (result) {
+            $(".datePicker").datepicker({
+                startDate: '+1d',
+                datesDisabled: result,
+                daysOfWeekDisabled: [0]
+            }).on("changeDate", function () {
+                $("select option").removeAttr('disabled');
+
+                var chooseDate = $(this).datepicker('getFormattedDate')
+                console.log(chooseDate);
+                $("input[name='rdate']").val(chooseDate);
+                var data = {
+                    rdate: chooseDate
+                }
+                console.log(data);
+
+                $.ajax({
+                    url: "/sushi/time",
+                    type: "post",
+                    data: JSON.stringify(data),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "text",
+                    success: function (result) {
+                        console.log(result);
+                        $.each(JSON.parse(result), function (idx, dto) {
+                            $("select option[value='" + dto.rtime + "']").attr('disabled', true);
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</th:block>

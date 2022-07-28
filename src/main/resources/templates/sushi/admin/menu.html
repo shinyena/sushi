@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
+        <h1 class="mt-4">메뉴 변경 &nbsp
+            <button class="btn btn-success addBtn">메뉴 추가</button>
+        </h1>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">종류</th>
+                <th scope="col">이름</th>
+                <th scope="col">설명</th>
+                <th scope="col">가격</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="dto: ${dtoList}">
+                <th scope="row">
+                    <a class="modifyLink" href="#" th:value="${dto.menuId}">[[${dto.menuId}]]</a>
+                </th>
+                <td>[[${dto.menuType}]]</td>
+                <td>[[${dto.menuName}]]</td>
+                <td>[[${dto.menuComment}]]</td>
+                <td>[[${#numbers.formatInteger(dto.menuPrice, 0, 'COMMA')}]]원</td>
+
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="menuModal modal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Menu</h5>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="menuId">
+                        <div class="form-group">
+                            <label>메뉴 종류</label>
+                            <select class="form-control" name="menuType">
+                                <option th:each="type: ${typeList}" th:value="${type.type}">[[${type.type}]]</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>메뉴 이름</label>
+                            <input type="text" class="form-control" name="menuName">
+                        </div>
+                        <div class="form-group">
+                            <label>메뉴 설명</label>
+                            <textarea id="menuComment" type="text" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>메뉴 가격</label>
+                            <input type="number" class="form-control" name="menuPrice">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary saveBtn">등록하기</button>
+                        <button type="button" class="btn btn-primary modifyBtn">수정하기</button>
+                        <button type="button" class="btn btn-primary removeBtn">삭제하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var menuType = $("select[name='menuType']");
+            var menuName = $("input[name='menuName']");
+            var menuComment = $("#menuComment");
+            var menuPrice = $("input[name='menuPrice']");
+
+            $(".modifyLink").click(function () {
+                var menuId = $(this).attr("value");
+                console.log(menuId);
+                $.ajax({
+                    url: "/sushi/admin/menu/" + menuId,
+                    success: function (dto) {
+                        $(".modal-title").html("메뉴 변경");
+                        menuType.val(dto.menuType);
+                        menuName.val(dto.menuName);
+                        menuComment.val(dto.menuComment);
+                        menuPrice.val(dto.menuPrice);
+                        $(".saveBtn").hide();
+                        $(".modifyBtn").show();
+                        $(".removeBtn").show();
+                        $(".menuModal").modal("show");
+                    }
+                });
+
+
+                $(".modifyBtn").off().click(function () {
+                    var data = {
+                        menuId: menuId,
+                        menuName: menuName.val(),
+                        menuComment: menuComment.val(),
+                        menuPrice: parseInt(menuPrice.val()),
+                        menuType: menuType.val()
+                    }
+                    console.log(data);
+                    $.ajax({
+                        url: "/sushi/admin/menu",
+                        type: "put",
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "text",
+                        success: function () {
+                            alert("변경이 완료되었습니다.");
+                            self.location.reload();
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+
+                    })
+                });
+
+                $(".removeBtn").off().click(function () {
+                    var data = {
+                        menuId: menuId
+                    }
+                    console.log(data);
+                    $.ajax({
+                        url: "/sushi/admin/menu",
+                        type: "delete",
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "text",
+                        success: function () {
+                            alert("삭제가 완료되었습니다.");
+                            self.location.reload();
+                        },
+                    })
+                });
+
+
+            });
+
+            $(".addBtn").click(function () {
+                $(".modal-title").html("메뉴 등록");
+                menuName.val("");
+                menuComment.val("");
+                menuPrice.val("");
+                menuType.val("");
+                $(".saveBtn").show();
+                $(".modifyBtn").hide();
+                $(".removeBtn").hide();
+                $(".menuModal").modal("show");
+
+                $(".saveBtn").off().click(function () {
+                    var data = {
+                        menuType: menuType.val(),
+                        menuName: menuName.val(),
+                        menuComment: menuComment.val(),
+                        menuPrice: parseInt(menuPrice.val())
+                    }
+                    $.ajax({
+                        url: "/sushi/admin/menu",
+                        type: "post",
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "text",
+                        success: function () {
+                            alert("등록이 완료되었습니다.");
+                            self.location.reload();
+                        }
+                    })
+                });
+            });
+
+
+        </script>
+    </th:block>
+</th:block>
+

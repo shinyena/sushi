@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background: url(/assets/img/sushi1.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2 class="animate__animated animate__fadeInDown">[[${info.title1}]]</h2>
+                            <p class="animate__animated animate__fadeInUp">[[${info.content1}]]</p>
+                            <div>
+                                <a th:href="@{/sushi/register#book-a-table}" class="btn-menu animate__animated animate__fadeInUp scrollto">예약하기</a>
+                                <a th:href="@{/sushi/list#specials}" class="btn-book animate__animated animate__fadeInUp scrollto">예약내역</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background: url(/assets/img/sushi2.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2 class="animate__animated animate__fadeInDown">[[${info.title2}]]</h2>
+                            <p class="animate__animated animate__fadeInUp">[[${info.content2}]]</p>
+                            <div>
+                                <a th:href="@{/sushi/register#book-a-table}" class="btn-menu animate__animated animate__fadeInUp scrollto">예약하기</a>
+                                <a th:href="@{/sushi/list#specials}" class="btn-book animate__animated animate__fadeInUp scrollto">예약내역</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background: url(/assets/img/sushi3.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content">
+                            <h2 class="animate__animated animate__fadeInDown">[[${info.title3}]]</h2>
+                            <p class="animate__animated animate__fadeInUp">[[${info.content3}]]</p>
+                            <div>
+                                <a th:href="@{/sushi/register#book-a-table}" class="btn-menu animate__animated animate__fadeInUp scrollto">예약하기</a>
+                                <a th:href="@{/sushi/list#specials}" class="btn-book animate__animated animate__fadeInUp scrollto">예약내역</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</th:block>
