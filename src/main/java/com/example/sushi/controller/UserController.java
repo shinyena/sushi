@@ -39,7 +39,7 @@ public class UserController {
         String url = "https://kauth.kakao.com/oauth/authorize" +
                 "?response_type=code" +
                 "&client_id=c524a7239cfdb94b1732cb913de178c9" +
-                "&redirect_uri=http://ec2-13-125-151-111.ap-northeast-2.compute.amazonaws.com:8080/sushi/kakao/login";
+                "&redirect_uri=sushicaptain.com/sushi/kakao/login";
         return "redirect:" + url;
     }
 
@@ -62,7 +62,7 @@ public class UserController {
         model.addAttribute("info", information);
     }
 
-//    @UserLoginCheck
+    @UserLoginCheck
     @GetMapping("/register")
     public void getRegisterPage(Model model, HttpSession session) {
         model.addAttribute("email", session.getAttribute("userId"));
@@ -80,7 +80,7 @@ public class UserController {
         return "redirect:/sushi/main";
     }
 
-//    @UserLoginCheck
+    @UserLoginCheck
     @GetMapping("/list")
     public void getAllReservation(HttpSession session, Model model) {
         String email = session.getAttribute("userId").toString();
