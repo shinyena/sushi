@@ -7,22 +7,22 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-@Controller
 @RequiredArgsConstructor
+@Controller
 public class MainController {
     private final AdminService adminService;
 
     @GetMapping("/")
-    public String getMainPage(Model model) {
+    public ModelAndView getMainPage() {
+        ModelAndView mav = new ModelAndView("sushi/main");
         List<MenuDTO> menuList = adminService.getAllMenu();
-        model.addAttribute("menuList", menuList);
+        mav.addObject("menuList", menuList);
         InformationDTO information = adminService.getInformation("sushicaptain");
-        model.addAttribute("info", information);
-        return "/sushi/main";
+        mav.addObject("info", information);
+        return mav;
     }
 }
