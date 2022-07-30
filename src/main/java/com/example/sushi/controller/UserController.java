@@ -50,16 +50,8 @@ public class UserController {
         Map<String, Object> userInfo = kakaoLoginService.getUserInfo(token);
         session.setAttribute("userId", userInfo.get("email"));
         session.setAttribute("userName", userInfo.get("name"));
-        return "redirect:/susi/register#book-a-table";
+        return "redirect:/sushi/register#book-a-table";
 
-    }
-
-    @GetMapping("/main")
-    public void getMainPage(Model model) {
-        List<MenuDTO> menuList = adminService.getAllMenu();
-        model.addAttribute("menuList", menuList);
-        InformationDTO information = adminService.getInformation("sushicaptain");
-        model.addAttribute("info", information);
     }
 
     @UserLoginCheck
@@ -77,7 +69,7 @@ public class UserController {
                                       RedirectAttributes redirectAttributes) {
         service.register(reservationDTO);
         redirectAttributes.addFlashAttribute("msg", "예약이 완료되었습니다.");
-        return "redirect:/sushi/main";
+        return "redirect:/";
     }
 
     @UserLoginCheck
