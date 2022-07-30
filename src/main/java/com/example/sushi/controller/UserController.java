@@ -33,26 +33,26 @@ public class UserController {
     private final KakaoLoginService kakaoLoginService;
     private final AdminService adminService;
 
-    /** 사용자 카카오 로그인 */
-    @GetMapping("/kakao/authorize")
-    public String kakaoAuthorize() {
-        String url = "https://kauth.kakao.com/oauth/authorize" +
-                "?response_type=code" +
-                "&client_id=c524a7239cfdb94b1732cb913de178c9" +
-                "&redirect_uri=sushicaptain.com/sushi/kakao/login";
-        return "redirect:" + url;
-    }
-
-    @GetMapping("/kakao/login")
-    public String kakaoLogin(String code,
-                             HttpSession session) {
-        String token = kakaoLoginService.getToken(code);
-        Map<String, Object> userInfo = kakaoLoginService.getUserInfo(token);
-        session.setAttribute("userId", userInfo.get("email"));
-        session.setAttribute("userName", userInfo.get("name"));
-        return "redirect:/sushi/register#book-a-table";
-
-    }
+//    /** 사용자 카카오 로그인 */
+//    @GetMapping("/kakao/authorize")
+//    public String kakaoAuthorize() {
+//        String url = "https://kauth.kakao.com/oauth/authorize" +
+//                "?response_type=code" +
+//                "&client_id=c524a7239cfdb94b1732cb913de178c9" +
+//                "&redirect_uri=sushicaptain.com/sushi/kakao/login";
+//        return "redirect:" + url;
+//    }
+//
+//    @GetMapping("/kakao/login")
+//    public String kakaoLogin(String code,
+//                             HttpSession session) {
+//        String token = kakaoLoginService.getToken(code);
+//        Map<String, Object> userInfo = kakaoLoginService.getUserInfo(token);
+//        session.setAttribute("userId", userInfo.get("email"));
+//        session.setAttribute("userName", userInfo.get("name"));
+//        return "redirect:/sushi/register#book-a-table";
+//
+//    }
 
     @UserLoginCheck
     @GetMapping("/register")

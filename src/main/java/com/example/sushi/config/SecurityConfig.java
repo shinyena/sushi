@@ -1,17 +1,20 @@
 package com.example.sushi.config;
 
-import lombok.extern.log4j.Log4j2;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import com.example.sushi.service.KakaoOAuth2UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Role;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-@Configuration
-@Log4j2
-@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
+@RequiredArgsConstructor
+@EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    private final KakaoOAuth2UserService kakaoOAuth2UserService;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception{
-        http.csrf().disable();
+        http.authorizeRequests().antMatchers("/sushi/**").hasRole("USER");
+        http.oauth2Login().userInfoEndpoint().userService(kakaoOAuth2UserService);
     }
 }

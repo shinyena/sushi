@@ -18,7 +18,7 @@ public class MainController {
 
     @GetMapping("/")
     public ModelAndView getMainPage() {
-        ModelAndView mav = new ModelAndView("sushi/main");
+        ModelAndView mav = new ModelAndView("sushi/main"); // 매핑 경로와 뷰 경로가 달라 ModelAndView를 이용함
         List<MenuDTO> menuList = adminService.getAllMenu();
         mav.addObject("menuList", menuList);
         InformationDTO information = adminService.getInformation("sushicaptain");
