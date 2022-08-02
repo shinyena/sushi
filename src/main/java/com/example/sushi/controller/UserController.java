@@ -54,11 +54,13 @@ public class UserController {
 //
 //    }
 
-    @UserLoginCheck
+//    @UserLoginCheck
     @GetMapping("/register")
     public void getRegisterPage(Model model, HttpSession session) {
-        model.addAttribute("email", session.getAttribute("userId"));
-        model.addAttribute("name", session.getAttribute("userName"));
+        model.addAttribute("email", "yena5790");
+        model.addAttribute("name", "예나");
+//        model.addAttribute("email", session.getAttribute("userId"));
+//        model.addAttribute("name", session.getAttribute("userName"));
         InformationDTO information = adminService.getInformation("sushicaptain");
         model.addAttribute("info", information);
     }
