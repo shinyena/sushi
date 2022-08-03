@@ -48,10 +48,11 @@ public class KakaoOAuth2UserService extends DefaultOAuth2UserService {
         Map<String, Object> properties = (Map<String, Object>) attributes.get("properties");
         String nickname = properties.get("nickname").toString();
 
+        /** 세션에 이메일, 이름 저장하기 */
         httpSession.setAttribute("userId", email);
         httpSession.setAttribute("userName", nickname);
 
-
+        /** 등록되지 않은 회원이면 DB에 저장 */
         Optional<Member> byId = memberRepository.findById(email);
         if (!byId.isPresent()) {
             Member member = Member.builder()

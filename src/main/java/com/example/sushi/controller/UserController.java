@@ -37,10 +37,8 @@ public class UserController {
     @UserLoginCheck
     @GetMapping("/register")
     public void getRegisterPage(Model model, HttpSession session) {
-        log.info(session);
         model.addAttribute("email", session.getAttribute("userId"));
         model.addAttribute("name", session.getAttribute("userName"));
-        System.out.println("kakaoService.toString() = " + kakaoService.toString());
         InformationDTO information = adminService.getInformation("sushicaptain");
         model.addAttribute("info", information);
     }
