@@ -5,7 +5,8 @@ import com.example.sushi.dto.admin.InformationDTO;
 import com.example.sushi.dto.admin.MenuDTO;
 import com.example.sushi.dto.user.ReservationDTO;
 import com.example.sushi.service.AdminService;
-import com.example.sushi.service.KakaoLoginService;
+//import com.example.sushi.service.KakaoLoginService;
+import com.example.sushi.service.KakaoOAuth2UserService;
 import com.example.sushi.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -30,37 +31,16 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class UserController {
     private final UserService service;
-    private final KakaoLoginService kakaoLoginService;
     private final AdminService adminService;
+    private final KakaoOAuth2UserService kakaoService;
 
-//    /** 사용자 카카오 로그인 */
-//    @GetMapping("/kakao/authorize")
-//    public String kakaoAuthorize() {
-//        String url = "https://kauth.kakao.com/oauth/authorize" +
-//                "?response_type=code" +
-//                "&client_id=c524a7239cfdb94b1732cb913de178c9" +
-//                "&redirect_uri=sushicaptain.com/sushi/kakao/login";
-//        return "redirect:" + url;
-//    }
-//
-//    @GetMapping("/kakao/login")
-//    public String kakaoLogin(String code,
-//                             HttpSession session) {
-//        String token = kakaoLoginService.getToken(code);
-//        Map<String, Object> userInfo = kakaoLoginService.getUserInfo(token);
-//        session.setAttribute("userId", userInfo.get("email"));
-//        session.setAttribute("userName", userInfo.get("name"));
-//        return "redirect:/sushi/register#book-a-table";
-//
-//    }
-
-//    @UserLoginCheck
+    @UserLoginCheck
     @GetMapping("/register")
     public void getRegisterPage(Model model, HttpSession session) {
-        model.addAttribute("email", "yena5790");
-        model.addAttribute("name", "예나");
-//        model.addAttribute("email", session.getAttribute("userId"));
-//        model.addAttribute("name", session.getAttribute("userName"));
+        log.info(session);
+        model.addAttribute("email", session.getAttribute("userId"));
+        model.addAttribute("name", session.getAttribute("userName"));
+        System.out.println("kakaoService.toString() = " + kakaoService.toString());
         InformationDTO information = adminService.getInformation("sushicaptain");
         model.addAttribute("info", information);
     }

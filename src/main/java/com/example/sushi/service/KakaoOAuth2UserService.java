@@ -29,9 +29,9 @@ public class KakaoOAuth2UserService extends DefaultOAuth2UserService {
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
-        log.info("여기 ");
         OAuth2User oAuth2User = super.loadUser(userRequest);
         Map<String, Object> attributes = oAuth2User.getAttributes();
+
 
         /** 이메일 받아오기 */
         Map<String, Object> kakao_account = (Map<String, Object>) attributes.get("kakao_account");
@@ -41,30 +41,26 @@ public class KakaoOAuth2UserService extends DefaultOAuth2UserService {
             email = "";
         }
         else {
-            email = (String) kakao_account.get("email").toString();
+            email = kakao_account.get("email").toString();
         }
 
         /** 이름 받아오기 */
         Map<String, Object> properties = (Map<String, Object>) attributes.get("properties");
-        String nickname = (String) properties.get("nickname").toString();
+        String nickname = properties.get("nickname").toString();
 
         httpSession.setAttribute("userId", email);
         httpSession.setAttribute("userName", nickname);
 
-//        log.info("email: ", email);
-//        log.info("nickname: ", nickname);
 
         Optional<Member> byId = memberRepository.findById(email);
         if (!byId.isPresent()) {
             Member member = Member.builder()
                     .email(email)
+                    .memberRole(MemberRole.USER)
                     .build();
-            member.addMemberRole(MemberRole.USER);
             memberRepository.save(member);
         }
 
-        return new DefaultOAuth2User(Collections.singleton(
-                new SimpleGrantedAuthority("USER")),
-                attributes, "id");
+        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")), attributes, "id");
     }
 }

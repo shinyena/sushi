@@ -1,5 +1,6 @@
 package com.example.sushi.dto.user;
 
+import com.example.sushi.entity.user.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,4 +16,5 @@ import java.util.Map;
 public class MemberDTO {
     private String email;
     private String password;
+
 }

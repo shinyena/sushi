@@ -26,7 +26,7 @@ public class LoginCheckAspect {
         HttpSession session = ((ServletRequestAttributes)(RequestContextHolder.currentRequestAttributes())).getRequest().getSession();
         if (session.getAttribute("userId") == null) {
             throw new ResponseStatusException(
-                    HttpStatus.UNAUTHORIZED, "/sushi/kakao/authorize");
+                    HttpStatus.UNAUTHORIZED, "/oauth2/authorization/kakao");
         }
     }
 }
