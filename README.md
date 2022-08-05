@@ -5,13 +5,13 @@
     <ul>
         <li>
             <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/dto/user/MemberDTO.java">MemberDTO</a>:
-            <a href="">Member</a>,
-            <a href="">MemberRole</a>
+            <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/entity/user/Member.java">Member</a>,
+            <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/entity/user/MemberRole.java">MemberRole</a>
         </li>
         <li>
             <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/dto/user/ReservationDTO.java">ReservationDTO</a>:
-            <a href="">Reservation</a>,
-            <a href="">ReserveTime</a>
+            <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/entity/user/Reservation.java">Reservation</a>,
+            <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/entity/user/ReserveTime.java">ReserveTime</a>
         </li>
     </ul>
     <h3>관리자</h3>
