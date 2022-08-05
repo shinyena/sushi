@@ -1,5 +1,6 @@
 <h1>레스토랑 예약 프로그램</h1>
 https://sushicaptain.com
+<br>
 
 <h2>Entity&DTO</h2>
     <h3>사용자</h3>
@@ -27,6 +28,7 @@ https://sushicaptain.com
             <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/entity/admin/MenuType.java">MenuType</a>
         </li>
     </ul>
+<br>
 
 <h2>Service</h2>
     <h3><a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/service/MemberServiceImpl.java">MemberService</a></h3>
@@ -47,6 +49,7 @@ https://sushicaptain.com
         <li>전체 메뉴 조회, 개별 메뉴 조회</li>
         <li>메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)</li>
     </ul>
+<br>
 
 <h2>View</h2>
     <h3>사용자 화면</h3>
@@ -76,6 +79,7 @@ https://sushicaptain.com
         <li><a href="">메뉴 종류 변경 화면</a></li>
         <li><a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/admin/information.html">관리자 정보 변경 화면</a></li>
     </ul>
+<br>    
 
 <h2>etc</h2>
     <h3>로그인</h3>
@@ -93,4 +97,5 @@ https://sushicaptain.com
         <li>controller: <a href="https://github.com/shinyena/sushi/blob/master/src/main/java/com/example/sushi/controller/CustomErrorController.java">CustomErrorController</a></li>
         <li><a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/error.html">error.html</a></li>
     </ul>
+<br>
         
