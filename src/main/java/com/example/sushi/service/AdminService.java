@@ -11,23 +11,25 @@ import java.util.List;
 public interface AdminService {
 
     /** Information Service */
-    InformationDTO getInformation(String adminId);
-    void modifyInformation(InformationDTO informationDTO);
+    InformationDTO getInformation(String adminId);          // 레스토랑 정보 조회
+    void modifyInformation(InformationDTO informationDTO);  // 레스토랑 정보 수정
 
     /** Menu Service */
-    void registerMenu(MenuDTO menuDTO);
-    List<MenuDTO> getAllMenu();
-    MenuDTO getOneMenu(Long menuId);
-    void modifyMenu(MenuDTO menuDTO);
-    void removeMenu(Long menuId);
+    void registerMenu(MenuDTO menuDTO);                     // 메뉴 등록
+    void modifyMenu(MenuDTO menuDTO);                       // 메뉴 수정
+    void removeMenu(Long menuId);                           // 메뉴 삭제
+    List<MenuDTO> getAllMenu();                             // 전체 메뉴 조회
+    MenuDTO getOneMenu(Long menuId);                        // 개별 메뉴 조회
 
     /** MenuType Service */
-    List<MenuType> getMenuType();
+//    void registerMenuType();                                // 메뉴 종류 등록
+//    void modifyMenyType();                                  // 메뉴 종류 수정
+//    void removeMenuType();                                  // 메뉴 종류 삭제
+    List<MenuType> getMenuType();                           // 메뉴 종류 조회
 
     default Information dtoToInformation(InformationDTO dto) {
         Information entity = Information.builder()
                 .adminId(dto.getAdminId())
-                .password(dto.getPassword())
                 .location(dto.getLocation())
                 .open(dto.getOpen())
                 .close(dto.getClose())
@@ -47,7 +49,6 @@ public interface AdminService {
     default InformationDTO informationToDto(Information entity) {
         InformationDTO dto = InformationDTO.builder()
                 .adminId(entity.getAdminId())
-                .password(entity.getPassword())
                 .location(entity.getLocation())
                 .open(entity.getOpen())
                 .close(entity.getClose())

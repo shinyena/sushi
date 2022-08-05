@@ -10,17 +10,14 @@
 
         <form th:action="@{/sushi/register}" th:method="post" role="form" class="php-email-form">
             <div class="row">
-                <div class="col-lg-4 col-md-6 form-group mt-3">
-                    <label>이메일</label>
-                    <input type="text" class="form-control" name="email" th:value="${email}" required>
-                </div>
+                <input type="hidden" class="form-control" name="mid" th:value="${memberDTO.mid}">
                 <div class="col-lg-4 col-md-6 form-group mt-3">
                     <label>예약자</label>
-                    <input type="text" class="form-control" name="name" th:value="${name}" required>
+                    <input type="text" class="form-control" name="name" th:value="${memberDTO.name}" required>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group mt-3">
                     <label>연락처</label>
-                    <input type="tel" class="form-control" name="phone" required>
+                    <input type="tel" class="form-control" name="phone" th:value="${memberDTO.phone}" required>
                 </div>
                 <div class="col-lg-4 col-md-6 form-group mt-3">
                     <label>예약일</label>

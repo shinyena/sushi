@@ -16,7 +16,6 @@ public class Information {
     @Id
     private String adminId;
 
-    private String password;
     private String location;
     private String open;
     private String close;
@@ -33,9 +32,6 @@ public class Information {
     private String content3;
     private String notice;
 
-    public void changePassword(String password) {
-        this.password = password;
-    }
     public void changeLocation(String location) {
         this.location = location;
     }

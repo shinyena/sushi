@@ -24,11 +24,7 @@
                         <form class="php-email-form" th:action="@{/sushi/modify}" th:method="post">
                             <input type="hidden" class="form-control" name="rid" th:value="${dto.rid}" readonly>
                             <div class="row">
-                                <div class="col-lg-6 form-group mt-3">
-                                    <label>이메일</label>
-                                    <input type="text" class="form-control" name="email" th:value="${dto.email}"
-                                           readonly>
-                                </div>
+                                <input type="hidden" class="form-control" name="mid" th:value="${dto.mid}">
                                 <div class="col-lg-6 form-group mt-3">
                                     <label>예약자</label>
                                     <input type="text" class="form-control" name="name" th:value="${dto.name}" required>

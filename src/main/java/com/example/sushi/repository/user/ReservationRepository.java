@@ -17,8 +17,8 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     @Query("select r from Reservation r where r.reserveTime.rdate = :date")
     List<Reservation> findByDate(LocalDate date);
 
-    @Query("select r from Reservation r where r.member.email = :email")
-    List<Reservation> findByEmail(String email);
+    @Query("select r from Reservation r where r.member.mid = :mid")
+    List<Reservation> findByMid(Long mid);
 
     @Query("select r from Reservation r order by r.reserveTime.rdate asc," +
             " r.reserveTime.rtime asc")

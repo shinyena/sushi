@@ -1,119 +1,50 @@
-//package com.example.sushi.service;
-//
-//import com.google.gson.JsonElement;
-//import com.google.gson.JsonObject;
-//import com.google.gson.JsonParser;
-//import lombok.extern.log4j.Log4j2;
-//import org.springframework.stereotype.Service;
-//
-//import java.io.*;
-//import java.net.HttpURLConnection;
-//import java.net.URL;
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//@Log4j2
-//@Service
-//public class KakaoLoginService {
-//    public String getToken(String code) {
-//        String reqURL = "https://kauth.kakao.com/oauth/token";
-//        try {
-//            URL url = new URL(reqURL);
-//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//            connection.setRequestMethod("POST");
-//            connection.setDoOutput(true);
-//
-//            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream()));
-//            StringBuilder stringBuilder = new StringBuilder();
-//            stringBuilder.append("grant_type=authorization_code");
-//            stringBuilder.append("&client_id=c524a7239cfdb94b1732cb913de178c9");
-//            stringBuilder.append("&redirect_uri=sushicaptain.com/sushi/kakao/login");
-//            stringBuilder.append("&code=" + code);
-//            bufferedWriter.write(stringBuilder.toString());
-//            bufferedWriter.flush();
-//
-//            int responseCode = connection.getResponseCode();
-//            System.out.println("responseCode = " + responseCode);
-//
-//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//            String line = "";
-//            String result = "";
-//
-//            while ((line = bufferedReader.readLine()) != null) {
-//                result += line;
-//            }
-//            System.out.println("result = " + result);
-//
-//
-//            JsonParser parser = new JsonParser();
-//            JsonElement element = parser.parse(result);
-//
-//            String access_token = element.getAsJsonObject().get("access_token").getAsString();
-//            String refresh_token = element.getAsJsonObject().get("refresh_token").getAsString();
-//
-//            System.out.println("access_token : " + access_token);
-//            System.out.println("refresh_token : " + refresh_token);
-//
-//            bufferedReader.close();
-//            bufferedWriter.close();
-//
-//            return access_token;
-//
-//
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
-//
-//    }
-//
-//    public Map<String, Object> getUserInfo(String token) {
-//        String reqURL = "https://kapi.kakao.com/v2/user/me";
-//        try {
-//            URL url = new URL(reqURL);
-//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//            connection.setRequestMethod("POST");
-//            connection.setRequestProperty("Authorization", "Bearer {" + token + "}");
-//
-//            int responseCode = connection.getResponseCode();
-//            System.out.println("responseCode = " + responseCode);
-//
-//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-//            String line = "";
-//            String result = "";
-//
-//            while ((line = bufferedReader.readLine()) != null) {
-//                result += line;
-//            }
-//            System.out.println("result = " + result);
-//
-//            JsonParser parser = new JsonParser();
-//            JsonElement element = parser.parse(result);
-//
-//            JsonObject kakao_account = element.getAsJsonObject().get("kakao_account").getAsJsonObject();
-//            String email;
-//            if (kakao_account.getAsJsonObject().get("email").isJsonNull()) {
-//                email = "";
-//            }
-//            else {
-//                email = kakao_account.getAsJsonObject().get("email").getAsString();
-//            }
-//            log.info("email = " + email);
-//
-//            JsonObject profile = kakao_account.getAsJsonObject().get("profile").getAsJsonObject();
-//            String name = profile.getAsJsonObject().get("nickname").getAsString();
-//
-//            Map<String, Object> userInfo = new HashMap<>();
-//            userInfo.put("email", email);
-//            userInfo.put("name", name);
-//
-//            return userInfo;
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return null;
-//    }
-//}
+package com.example.sushi.service;
+
+import com.example.sushi.dto.user.MemberDTO;
+import com.example.sushi.entity.user.Member;
+import com.example.sushi.entity.user.MemberRole;
+import com.example.sushi.repository.user.MemberRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
+import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
+import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
+import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpSession;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+@Log4j2
+@RequiredArgsConstructor
+@Service
+public class KakaoLoginService extends DefaultOAuth2UserService {
+    private final MemberService memberService;
+    private final HttpSession httpSession;
+
+    @Override
+    public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
+        OAuth2User oAuth2User = super.loadUser(userRequest);
+        Map<String, Object> attributes = oAuth2User.getAttributes();
+
+        /** 카카오 아이디 받아오기 */
+        Long kakaoID = Long.parseLong(attributes.get("id").toString());
+
+        /** 세션에 카카오 아이디 저장하기 */
+        httpSession.setAttribute("kakaoID", kakaoID);
+
+        /** 회원 저장 */
+        memberService.register(kakaoID);
+
+        /** MemberRole 불러오기 */
+        MemberRole memberRole = memberService.getOne(kakaoID).getMemberRole();
+
+        return new DefaultOAuth2User(Collections.singleton(
+                new SimpleGrantedAuthority("ROLE_"+memberRole.toString())), attributes, "id");
+    }
+}

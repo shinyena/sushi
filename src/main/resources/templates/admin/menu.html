@@ -79,7 +79,7 @@
                 var menuId = $(this).attr("value");
                 console.log(menuId);
                 $.ajax({
-                    url: "/sushi/admin/menu/" + menuId,
+                    url: "/admin/menu/" + menuId,
                     success: function (dto) {
                         $(".modal-title").html("메뉴 변경");
                         menuType.val(dto.menuType);
@@ -104,7 +104,7 @@
                     }
                     console.log(data);
                     $.ajax({
-                        url: "/sushi/admin/menu",
+                        url: "/admin/menu",
                         type: "put",
                         data: JSON.stringify(data),
                         contentType: "application/json; charset=utf-8",
@@ -126,7 +126,7 @@
                     }
                     console.log(data);
                     $.ajax({
-                        url: "/sushi/admin/menu",
+                        url: "/admin/menu",
                         type: "delete",
                         data: JSON.stringify(data),
                         contentType: "application/json; charset=utf-8",
@@ -160,7 +160,7 @@
                         menuPrice: parseInt(menuPrice.val())
                     }
                     $.ajax({
-                        url: "/sushi/admin/menu",
+                        url: "/admin/menu",
                         type: "post",
                         data: JSON.stringify(data),
                         contentType: "application/json; charset=utf-8",

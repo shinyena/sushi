@@ -30,11 +30,11 @@
             <div class="sidebar-heading border-bottom bg-light">스시캡틴</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                   th:href="@{/sushi/admin/list}">예약 내역 조회</a>
+                   th:href="@{/admin/list}">예약 내역 조회</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                   th:href="@{/sushi/admin/menu}">메뉴 변경</a>
+                   th:href="@{/admin/menu}">메뉴 변경</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3"
-                   th:href="@{/sushi/admin/information}">관리자 정보 변경</a>
+                   th:href="@{/admin/information}">관리자 정보 변경</a>
             </div>
         </div>
         <!-- Page content wrapper-->
@@ -43,11 +43,6 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <div class="container-fluid">
                     <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <span th:unless="${noLogin}" class="nav-item active">
-                        <a class="nav-link" th:href="@{/sushi/admin/logout}">Logout</a>
-                    </span>
-
-
                 </div>
             </nav>
             <!-- Page content-->

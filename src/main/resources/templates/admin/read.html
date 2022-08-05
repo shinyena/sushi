@@ -40,7 +40,7 @@
                 <textarea class="form-control" name="message" rows="5" readonly>[[${dto.message}]]</textarea>
             </div>
 
-            <a th:href="@{/sushi/admin/delete(rid=${dto.rid})}">
+            <a th:href="@{/admin/delete(rid=${dto.rid})}">
                 <button type="button" class="btn btn-danger">예약 취소</button>
             </a>
         </form>

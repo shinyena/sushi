@@ -13,18 +13,10 @@ import javax.servlet.http.HttpSession;
 @Aspect
 @Component
 public class LoginCheckAspect {
-    @Before("@annotation(com.example.sushi.annotation.AdminLoginCheck)")
-    public void adminLoginCheck() throws Throwable{
-        HttpSession session = ((ServletRequestAttributes)(RequestContextHolder.currentRequestAttributes())).getRequest().getSession();
-        if (session.getAttribute("adminId") == null) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "/sushi/admin/login");
-        }
-    }
-
-    @Before("@annotation(com.example.sushi.annotation.UserLoginCheck)")
+    @Before("@annotation(com.example.sushi.annotation.LoginCheck)")
     public void userLoginCheck() throws Throwable{
         HttpSession session = ((ServletRequestAttributes)(RequestContextHolder.currentRequestAttributes())).getRequest().getSession();
-        if (session.getAttribute("userId") == null) {
+        if (session.getAttribute("kakaoID") == null) {
             throw new ResponseStatusException(
                     HttpStatus.UNAUTHORIZED, "/oauth2/authorization/kakao");
         }

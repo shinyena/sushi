@@ -15,14 +15,14 @@ import java.util.List;
 @Controller
 public class MainController {
     private final AdminService adminService;
+    private final String adminId = "yena5790@naver.com";
 
     @GetMapping("/")
-    public ModelAndView getMainPage() {
-        ModelAndView mav = new ModelAndView("sushi/main"); // 매핑 경로와 뷰 경로가 달라 ModelAndView를 이용함
+    public String getMainPage(Model model) {
         List<MenuDTO> menuList = adminService.getAllMenu();
-        mav.addObject("menuList", menuList);
-        InformationDTO information = adminService.getInformation("sushicaptain");
-        mav.addObject("info", information);
-        return mav;
+        model.addAttribute("menuList", menuList);
+        InformationDTO information = adminService.getInformation(adminId);
+        model.addAttribute("info", information);
+        return "/sushi/main";
     }
 }

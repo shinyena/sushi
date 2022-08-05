@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--<th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">-->
-<!--    <th:block th:fragment="content">-->
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
         <h1 class="mt-4">Error Page</h1>
         <p>code: [[${code}]]</p>
         <p>msg: [[${msg}]]</p>
         <p>timestamp: [[${timestamp}]]</p>
-<!--    </th:block>-->
-<!--</th:block>-->
-
+</body>
+</html>

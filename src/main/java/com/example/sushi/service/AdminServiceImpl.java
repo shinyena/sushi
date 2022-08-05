@@ -36,7 +36,6 @@ public class AdminServiceImpl implements AdminService{
     public void modifyInformation(InformationDTO informationDTO) {
         Optional<Information> byId = informationRepository.findById(informationDTO.getAdminId());
         Information information = byId.get();
-        information.changePassword(informationDTO.getPassword());
         information.changeLocation(informationDTO.getLocation());
         information.changeOpen(informationDTO.getOpen());
         information.changeClose(informationDTO.getClose());

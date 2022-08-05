@@ -3,7 +3,7 @@
 <th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">
     <th:block th:fragment="content">
         <h1 class="mt-4">Login Page</h1>
-        <form th:action="@{/sushi/admin/login}" th:method="post">
+        <form th:action="@{/admin/login}" th:method="post">
             <div class="form-group">
                 <label>EMAIL</label>
                 <input type="text" class="form-control" name="adminId" required>

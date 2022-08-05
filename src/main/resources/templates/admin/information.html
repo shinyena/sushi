@@ -4,7 +4,7 @@
     <th:block th:fragment="content">
         <h1 class="mt-4">관리자 정보 변경</h1>
 
-        <form th:action="@{/sushi/admin/information}" th:method="post">
+        <form th:action="@{/admin/information}" th:method="post">
             <div class="form-group">
                 <label>관리자 아이디</label>
                 <input type="text" class="form-control" name="adminId" th:value="${dto.adminId}" readonly>

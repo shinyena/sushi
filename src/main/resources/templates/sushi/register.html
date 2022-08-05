@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout/userIndex :: setContent(~{this::content})}">
     <th:block th:fragment="content">
-        <!-- ======= Hero Section ======= -->
+        <!-- ======= 레스토랑 배너 ======= -->
         <section id="hero">
             <th:block th:replace="sushi/fragment/hero :: hero"></th:block>
         </section><!-- End Hero -->
 
-        <!-- ======= Book A Table Section ======= -->
+        <!-- ======= 예약 등록 ======= -->
         <main id="main">
             <section id="book-a-table" class="book-a-table">
                 <th:block th:replace="sushi/fragment/book :: book"></th:block>

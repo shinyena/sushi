@@ -2,14 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout/userIndex :: setContent(~{this::content})}">
     <th:block th:fragment="content">
-        <!-- ======= Hero Section ======= -->
+        <!-- ======= 레스토랑 배너 ======= -->
         <section id="hero">
             <th:block th:replace="sushi/fragment/hero :: hero"></th:block>
         </section><!-- End Hero -->
 
         <main id="main">
 
-            <!-- ======= Specials Section ======= -->
+            <!-- ======= 예약 조회 ======= -->
             <section id="specials" class="specials">
                 <th:block th:replace="sushi/fragment/special :: special"></th:block>
             </section><!-- End Specials Section -->

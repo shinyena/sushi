@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class ReservationDTO {
     private Long rid;
-    private String email;
+    private Long mid;
     private String name;
     private String phone;
     private int count;

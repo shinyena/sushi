@@ -18,9 +18,14 @@ import java.util.Set;
 @ToString
 public class Member {
     @Id
-    private String email;
-    private String password;
+    private Long mid;
+
+    private String name;
+    private String phone;
 
     @Enumerated(EnumType.STRING)
     private MemberRole memberRole;
+
+    public void changeName(String name) { this.name = name; }
+    public void changePhone(String phone) { this.phone = phone; }
 }

@@ -4,30 +4,26 @@ import com.example.sushi.dto.user.ReservationDTO;
 import com.example.sushi.entity.user.Member;
 import com.example.sushi.entity.user.Reservation;
 import com.example.sushi.entity.user.ReserveTime;
+import com.example.sushi.repository.user.MemberRepository;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public interface UserService {
-    void register(ReservationDTO reservationDTO);
-    void modify(ReservationDTO reservationDTO);
-    void remove(Long rid);
+public interface ReservationService {
+    Long register(ReservationDTO reservationDTO);   // 예약 등록
+    Long modify(ReservationDTO reservationDTO);     // 예약 수정
+    void remove(Long rid);                          // 예약 삭제
 
-    List<ReservationDTO> getAll();
-    List<ReservationDTO> getList(String email);
-    ReservationDTO getOne(Long rid);
-    List<ReservationDTO> getTime(LocalDate date);
-    List<LocalDate> getDate();
+    List<ReservationDTO> getAll();                  // 전체 예약 조회
+    List<ReservationDTO> getList(Long mid);         // 한 사람의 전체 예약 조회
+    ReservationDTO getOne(Long rid);                // 개별 예약 조회
+    List<ReservationDTO> getTime(LocalDate date);   // 예약 가능 시간 조회
+    List<LocalDate> getDate();                      // 예약 가능 날짜 조회
 
-    default Map<String, Object> dtoToEntity(ReservationDTO dto) {
+    default Map<String, Object> dtoToEntity(ReservationDTO dto, Member member) {
         Map<String, Object> entityMap = new HashMap<>();
-
-        Member member = Member.builder()
-                .email(dto.getEmail())
-                .build();
-        entityMap.put("member", member);
 
         ReserveTime reserveTime = ReserveTime.builder()
                 .rdate(dto.getRdate())
@@ -52,7 +48,7 @@ public interface UserService {
     default ReservationDTO entityToDTO(Reservation reservation) {
         ReservationDTO dto = ReservationDTO.builder()
                 .rid(reservation.getRid())
-                .email(reservation.getMember().getEmail())
+                .mid(reservation.getMember().getMid())
                 .name(reservation.getName())
                 .phone(reservation.getPhone())
                 .count(reservation.getCount())
