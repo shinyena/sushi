@@ -1,4 +1,4 @@
-<h1><a href="sushicaptain.com">레스토랑 예약 프로그램</a></h1>
+http://sushicaptain.com
 
 <h2>Entity&DTO</h2>
     <h3>사용자</h3>
