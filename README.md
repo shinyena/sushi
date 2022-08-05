@@ -24,16 +24,19 @@
 </ul>
 
 <h1>Service</h1>
-<ul><a href="">MemberService</a>
+<li><a href="">MemberService</a></li>
+<ul>
     <li>회원 등록, 회원 수정, 회원 삭제</li>
     <li>전체 회원 정보 조회, 개별 회원 정보 조회</li>
 </ul>
-<ul><a href="">ReservationService</a>
+<li><a href="">ReservationService</a></li>
+<ul>
     <li>예약 등록, 예약 수정, 예약 삭제</li>
     <li>전체 예약 조회, 개별 예약 조회, 회원 예약 조회</li>
     <li>예약 가능 날짜 조회, 예약 가능 시간 조회</li>
 </ul>
-<ul><a href="">AdminService</a>
+<li><a href="">AdminService</a></li>
+<ul>
     <li>레스토랑 정보 조회, 레스토랑 정보 수정</li>
     <li>메뉴 등록, 메뉴 수정, 메뉴 삭제</li>
     <li>전체 메뉴 조회, 개별 메뉴 조회</li>
