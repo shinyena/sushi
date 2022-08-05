@@ -9,6 +9,7 @@ import com.example.sushi.repository.admin.InformationRepository;
 import com.example.sushi.repository.admin.MenuRepository;
 import com.example.sushi.repository.admin.MenuTypeRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Log4j2
 @Service
 @RequiredArgsConstructor
 public class AdminServiceImpl implements AdminService{
@@ -27,35 +29,47 @@ public class AdminServiceImpl implements AdminService{
     @Override
     public InformationDTO getInformation(String adminId) {
         Optional<Information> byId = informationRepository.findById(adminId);
-        Information information = byId.get();
-        InformationDTO informationDTO = informationToDto(information);
-        return informationDTO;
+        if (byId.isPresent()) {
+            Information information = byId.get();
+            InformationDTO informationDTO = informationToDto(information);
+            return informationDTO;
+        } else {
+            log.error("informationRepository 조회 오류");
+        }
+        return null;
+
     }
 
     @Override
-    public void modifyInformation(InformationDTO informationDTO) {
+    public String modifyInformation(InformationDTO informationDTO) {
         Optional<Information> byId = informationRepository.findById(informationDTO.getAdminId());
-        Information information = byId.get();
-        information.changeLocation(informationDTO.getLocation());
-        information.changeOpen(informationDTO.getOpen());
-        information.changeClose(informationDTO.getClose());
-        information.changeInstagram(informationDTO.getInstagram());
-        information.changeCall(informationDTO.getPhone());
-        information.changeTitle1(informationDTO.getTitle1());
-        information.changeTitle2(informationDTO.getTitle2());
-        information.changeTitle3(informationDTO.getTitle3());
-        information.changeContent1(informationDTO.getContent1());
-        information.changeContent2(informationDTO.getContent2());
-        information.changeContent3(informationDTO.getContent3());
-        information.changeNotice(informationDTO.getNotice());
-        informationRepository.save(information);
+        if (byId.isPresent()) {
+            Information information = byId.get();
+            information.changeLocation(informationDTO.getLocation());
+            information.changeOpen(informationDTO.getOpen());
+            information.changeClose(informationDTO.getClose());
+            information.changeInstagram(informationDTO.getInstagram());
+            information.changeCall(informationDTO.getPhone());
+            information.changeTitle1(informationDTO.getTitle1());
+            information.changeTitle2(informationDTO.getTitle2());
+            information.changeTitle3(informationDTO.getTitle3());
+            information.changeContent1(informationDTO.getContent1());
+            information.changeContent2(informationDTO.getContent2());
+            information.changeContent3(informationDTO.getContent3());
+            information.changeNotice(informationDTO.getNotice());
+            return informationRepository.save(information).getAdminId();
+        } else {
+            log.error("informationRepository 조회 오류");
+        }
+        return null;
+
     }
 
     @Override
-    public void registerMenu(MenuDTO menuDTO) {
+    public Long registerMenu(MenuDTO menuDTO) {
         MenuType menuType = menuTypeRepository.findMenuTypeByType(menuDTO.getMenuType());
         Menu menu = dtoToMenu(menuDTO, menuType);
-        menuRepository.save(menu);
+        return menuRepository.save(menu).getMenuId();
     }
 
     @Override
@@ -72,21 +86,31 @@ public class AdminServiceImpl implements AdminService{
     @Override
     public MenuDTO getOneMenu(Long menuId) {
         Optional<Menu> byId = menuRepository.findById(menuId);
-        Menu menu = byId.get();
-        MenuDTO dto = menuToDto(menu);
-        return dto;
+        if (byId.isPresent()) {
+            Menu menu = byId.get();
+            MenuDTO dto = menuToDto(menu);
+            return dto;
+        } else {
+            log.error("menuRepository 조회 오류");
+        }
+        return null;
     }
 
     @Override
-    public void modifyMenu(@RequestBody MenuDTO menuDTO) {
+    public Long modifyMenu(@RequestBody MenuDTO menuDTO) {
         MenuType menuType = menuTypeRepository.findMenuTypeByType(menuDTO.getMenuType());
         Optional<Menu> byId = menuRepository.findById(menuDTO.getMenuId());
-        Menu menu = byId.get();
-        menu.changeMenuName(menuDTO.getMenuName());
-        menu.changeMenuComment(menuDTO.getMenuComment());
-        menu.changeMenuPrice(menuDTO.getMenuPrice());
-        menu.changeMenuType(menuType);
-        menuRepository.save(menu);
+        if (byId.isPresent()) {
+            Menu menu = byId.get();
+            menu.changeMenuName(menuDTO.getMenuName());
+            menu.changeMenuComment(menuDTO.getMenuComment());
+            menu.changeMenuPrice(menuDTO.getMenuPrice());
+            menu.changeMenuType(menuType);
+            return menuRepository.save(menu).getMenuId();
+        } else {
+            log.error("menuRepository 조회 오류");
+        }
+        return null;
     }
 
     @Override

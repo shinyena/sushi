@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface MemberService {
-    void register(Long mid);                    // 회원 등록
-    void modify(ReservationDTO reservationDTO); // 회원 정보 수정
+    Long register(Long mid);                    // 회원 등록
+    Long modify(ReservationDTO reservationDTO); // 회원 정보 수정
     void remove(Long mid) ;                     // 회원 삭제
     List<MemberDTO> getAll();                   // 전체 회원 조회
     MemberDTO getOne(Long mid);                 // 개별 회원 조회

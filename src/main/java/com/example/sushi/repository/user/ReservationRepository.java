@@ -9,11 +9,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
-    @Query("select t from Reservation r" +
-            " left outer join ReserveTime t on r.reserveTime = t" +
-            " where r.rid = :rid")
-    ReserveTime getReserveTimeByRid(Long rid);
-
     @Query("select r from Reservation r where r.reserveTime.rdate = :date")
     List<Reservation> findByDate(LocalDate date);
 
