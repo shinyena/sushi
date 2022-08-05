@@ -1,4 +1,4 @@
-<h1>Entity&DTO</h1>
+<h2>Entity&DTO</h2>
 <h3>사용자</h3>
 <ul>
     <li>
@@ -25,7 +25,7 @@
     </li>
 </ul>
 
-<h1>Service</h1>
+<h2>Service</h2>
 <h3><a href="">MemberService</a></h3>
 <ul>
     <li>회원 등록, 회원 수정, 회원 삭제</li>
@@ -45,7 +45,7 @@
     <li>메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)</li>
 </ul>
 
-<h1>View</h1>
+<h2>View</h2>
 <h3>사용자 화면</h3>
 <ul>
     <li>
@@ -76,7 +76,7 @@
     <li><a href="">관리자 정보 변경 화면</a></li>
 </ul>
 
-<h1>etc</h1>
+<h2>etc</h2>
     <h3>로그인</h3>
     <ul>
         <li>annotation: <a href="">LoginCheckAspect</a></li>
