@@ -24,7 +24,7 @@
 </ul>
 
 <h1>Service</h1>
-<li><a href="">MemberService</a></li>
+<h3><a href="">MemberService</a></h3>
 <ul>
     <li>회원 등록, 회원 수정, 회원 삭제</li>
     <li>전체 회원 정보 조회, 개별 회원 정보 조회</li>
