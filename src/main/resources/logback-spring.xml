@@ -1,5 +1,5 @@
 <configuration>
-    <property name="LOG_PATH" value="./log/"/>
+    <property name="LOG_PATH" value="/sushi/log/"/>
     <property name="LOG_FILE_NAME" value="local_log"/>
     <property name="ERR_LOG_FILE_NAME" value="err_log"/>
     <property name="LOG_PATTERN" value="%-5level %d{yy-MM-dd HH:mm:ss}[%thread] [%logger{0}:%line] - %msg%n"/>

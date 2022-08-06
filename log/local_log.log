@@ -1917,3 +1917,6 @@ INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [[/]:173] - Initializing Spring Di
 INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
 INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
 WARN  22-08-06 17:13:32[HikariPool-1 housekeeper] [HikariPool:788] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m47s806ms477µs).
+INFO  22-08-06 17:22:01[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 17:22:01[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 17:22:01[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
