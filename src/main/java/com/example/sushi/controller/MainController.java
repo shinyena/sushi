@@ -21,13 +21,11 @@ public class MainController {
     private final AdminService adminService;
 
     @GetMapping("/")
-    public ModelAndView getMainPage() {
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("/sushi/main");
+    public String getMainPage(Model model) {
         List<MenuDTO> menuList = adminService.getAllMenu();
-        mav.addObject("menuList", menuList);
+        model.addAttribute("menuList", menuList);
         InformationDTO information = adminService.getInformation(adminId);
-        mav.addObject("info", information);
-        return mav;
+        model.addAttribute("info", information);
+        return "main";
     }
 }
