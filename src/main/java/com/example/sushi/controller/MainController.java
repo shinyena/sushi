@@ -4,6 +4,7 @@ import com.example.sushi.dto.admin.InformationDTO;
 import com.example.sushi.dto.admin.MenuDTO;
 import com.example.sushi.service.AdminService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class MainController {
+    @Value("${adminid}")
+    private String adminId;
+
     private final AdminService adminService;
-    private final String adminId = "yena5790@naver.com";
 
     @GetMapping("/")
     public String getMainPage(Model model) {

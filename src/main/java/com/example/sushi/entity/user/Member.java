@@ -28,4 +28,7 @@ public class Member {
 
     public void changeName(String name) { this.name = name; }
     public void changePhone(String phone) { this.phone = phone; }
+    public void changeRole(MemberRole memberRole) {
+        this.memberRole = memberRole;
+    }
 }

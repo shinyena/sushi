@@ -76,5 +76,22 @@ public class MemberServiceImpl implements MemberService{
         }
     }
 
+    @Override
+    public void changeRole(Long mid) {
+        Optional<Member> byId = memberRepository.findById(mid);
+        if (byId.isPresent()) {
+            Member member = byId.get();
+            if (member.getMemberRole() == MemberRole.ADMIN) {
+                member.changeRole(MemberRole.USER);
+            } else {
+                member.changeRole(MemberRole.ADMIN);
+            }
+            memberRepository.save(member);
+        } else {
+            log.error("changeRole(), memberRepository 조회 오류");
+        }
+    }
+
+
 
 }

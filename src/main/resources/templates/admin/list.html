@@ -2,28 +2,30 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout/adminIndex :: setContent(~{this::content})}">
     <th:block th:fragment="content">
-        <h1 class="mt-4">회원 내역 조회</h1>
+        <h1 class="mt-4">회원별 예약 내역 조회</h1>
 
         <table class="table table-striped">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">이름</th>
+                <th scope="col">예약자</th>
                 <th scope="col">연락처</th>
-                <th scope="col">권한</th>
-                <th scope="col"></th>
+                <th scope="col">예약일</th>
+                <th scope="col">예약시간</th>
+                <th scope="col">인원수</th>
             </tr>
             </thead>
 
             <tbody>
             <tr th:each="dto: ${dtoList}">
                 <th scope="row">
-                    <a th:href="@{/admin/list(mid=${dto.mid})}">[[${dto.mid}]]</a>
+                    <a th:href="@{/admin/read(rid=${dto.rid})}">[[${dto.rid}]]</a>
                 </th>
                 <td>[[${dto.name}]]</td>
                 <td>[[${dto.phone}]]</td>
-                <td>[[${dto.memberRole}]]</td>
-                <td><a th:href="@{/admin/role(mid=${dto.mid})}">권한 변경</a></td>
+                <td>[[${dto.rdate}]]</td>
+                <td>[[${dto.rtime}]]</td>
+                <td>[[${dto.count}]]</td>
             </tr>
             </tbody>
         </table>

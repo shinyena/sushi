@@ -15,6 +15,7 @@ public interface MemberService {
     void remove(Long mid) ;                     // 회원 삭제
     List<MemberDTO> getAll();                   // 전체 회원 조회
     MemberDTO getOne(Long mid);                 // 개별 회원 조회
+    void changeRole(Long mid);                  // 회원 권한 변경
 
     default MemberDTO entityToDTO(Member member) {
         MemberDTO dto = MemberDTO.builder()

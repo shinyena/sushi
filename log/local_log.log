@@ -1253,3 +1253,667 @@ INFO  22-08-06 16:00:10[main] [SushiApplication:61] - Started SushiApplication i
 INFO  22-08-06 16:00:10[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
 INFO  22-08-06 16:00:10[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
 INFO  22-08-06 16:00:10[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:28:25[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 26584 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:28:25[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:28:26[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:28:26[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 100 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:28:27[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:28:27[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:28:27[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:28:27[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:28:27[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:28:27[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2155 ms
+INFO  22-08-06 16:28:28[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:28:28[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:28:28[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:28:29[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:28:29[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:28:29[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:28:30[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:28:30[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:28:30[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:28:31[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@749c0669, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4468c0ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@3225d950, org.springframework.security.web.header.HeaderWriterFilter@700202fa, org.springframework.security.web.authentication.logout.LogoutFilter@4ba1f425, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@787a4519, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@627d5f1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@58c36104, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@41cf4272, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@470a446f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d2b13f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53d2b827, org.springframework.security.web.session.SessionManagementFilter@65698020, org.springframework.security.web.access.ExceptionTranslationFilter@aaa7000, org.springframework.security.web.access.intercept.AuthorizationFilter@7d2be319]
+INFO  22-08-06 16:28:31[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:28:31[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:28:31[main] [SushiApplication:61] - Started SushiApplication in 6.656 seconds (JVM running for 7.553)
+INFO  22-08-06 16:29:11[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:29:11[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:29:11[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+WARN  22-08-06 16:29:11[http-nio-8080-exec-1] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [146] milliseconds.
+ERROR 22-08-06 16:29:12[http-nio-8080-exec-3] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:29:58[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:29:58[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:29:58[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:30:07[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 13956 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:30:07[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:30:08[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:30:08[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 92 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:30:09[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:30:09[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:30:09[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:30:09[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:30:09[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:30:09[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2006 ms
+INFO  22-08-06 16:30:10[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:30:10[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:30:10[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:30:10[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:30:10[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:30:10[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:30:11[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:30:12[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:30:12[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:30:12[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38363e96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35c95869, org.springframework.security.web.context.SecurityContextPersistenceFilter@39a30d1a, org.springframework.security.web.header.HeaderWriterFilter@470a446f, org.springframework.security.web.authentication.logout.LogoutFilter@7d2be319, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@37a0fc8c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1ba3c03d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d84b088, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@558aa1f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1958524b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e225c34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@361d8567, org.springframework.security.web.session.SessionManagementFilter@4942e6af, org.springframework.security.web.access.ExceptionTranslationFilter@65698020, org.springframework.security.web.access.intercept.AuthorizationFilter@bf18412]
+INFO  22-08-06 16:30:13[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:30:13[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:30:13[main] [SushiApplication:61] - Started SushiApplication in 6.397 seconds (JVM running for 7.415)
+INFO  22-08-06 16:30:13[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:30:13[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:30:13[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 0 ms
+WARN  22-08-06 16:30:17[http-nio-8080-exec-5] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [298] milliseconds.
+ERROR 22-08-06 16:30:18[http-nio-8080-exec-4] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:34:56[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:34:56[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:34:56[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:35:02[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 24684 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:35:02[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:35:04[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:35:04[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 97 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:35:04[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:35:04[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:35:04[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:35:04[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:35:05[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:35:05[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2065 ms
+INFO  22-08-06 16:35:05[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:35:05[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:35:05[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:35:05[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:35:05[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:35:05[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:35:06[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:35:06[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:35:07[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:35:07[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@627d5f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@105fe81e, org.springframework.security.web.context.SecurityContextPersistenceFilter@64fba3e6, org.springframework.security.web.header.HeaderWriterFilter@43b2e7db, org.springframework.security.web.authentication.logout.LogoutFilter@69c0bae6, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@20a25f66, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@488279d3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4942e6af, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@af94b0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@102c24d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55315a00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@208185c0, org.springframework.security.web.session.SessionManagementFilter@530df3ab, org.springframework.security.web.access.ExceptionTranslationFilter@2ae88712, org.springframework.security.web.access.intercept.AuthorizationFilter@2c2edbe7]
+INFO  22-08-06 16:35:08[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:35:08[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:35:08[main] [SushiApplication:61] - Started SushiApplication in 6.18 seconds (JVM running for 7.209)
+INFO  22-08-06 16:35:08[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:35:08[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:35:08[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+WARN  22-08-06 16:35:08[http-nio-8080-exec-1] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [129] milliseconds.
+ERROR 22-08-06 16:35:09[http-nio-8080-exec-3] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:38:22[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:38:22[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:38:23[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:38:30[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 22632 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:38:30[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:38:32[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:38:32[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:38:33[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:38:33[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:38:33[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:38:33[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:38:33[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:38:33[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2269 ms
+INFO  22-08-06 16:38:33[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:38:33[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:38:33[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:38:33[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:38:33[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:38:33[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:38:34[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:38:34[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:38:35[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:38:35[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1831447c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7741507c, org.springframework.security.web.context.SecurityContextPersistenceFilter@700202fa, org.springframework.security.web.header.HeaderWriterFilter@aaa7000, org.springframework.security.web.authentication.logout.LogoutFilter@4a3333be, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@13866865, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4891d727, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@670ae31f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37a0fc8c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65698020, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39a30d1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ba3c03d, org.springframework.security.web.session.SessionManagementFilter@58d79479, org.springframework.security.web.access.ExceptionTranslationFilter@57ab4b33, org.springframework.security.web.access.intercept.AuthorizationFilter@73fe7483]
+INFO  22-08-06 16:38:36[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:38:36[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:38:36[main] [SushiApplication:61] - Started SushiApplication in 5.943 seconds (JVM running for 6.884)
+INFO  22-08-06 16:38:39[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:38:39[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:38:39[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+WARN  22-08-06 16:38:43[http-nio-8080-exec-3] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [307] milliseconds.
+ERROR 22-08-06 16:38:44[http-nio-8080-exec-4] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:39:11[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:39:11[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:39:11[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:39:18[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 20820 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:39:18[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:39:19[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:39:19[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 93 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:39:20[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:39:20[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:39:20[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:39:20[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:39:20[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:39:20[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 1963 ms
+INFO  22-08-06 16:39:20[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:39:20[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:39:20[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:39:21[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:39:21[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:39:21[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:39:22[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:39:22[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:39:22[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:39:22[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35c95869, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@558aa1f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@670ae31f, org.springframework.security.web.header.HeaderWriterFilter@55315a00, org.springframework.security.web.authentication.logout.LogoutFilter@35d3202b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1ba3c03d, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@9a37591, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@69c0bae6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@361d8567, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@129aaac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d84b088, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fd6dfbc, org.springframework.security.web.session.SessionManagementFilter@73a1a1b4, org.springframework.security.web.access.ExceptionTranslationFilter@57617a75, org.springframework.security.web.access.intercept.AuthorizationFilter@5da2966]
+INFO  22-08-06 16:39:23[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:39:23[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:39:23[main] [SushiApplication:61] - Started SushiApplication in 5.583 seconds (JVM running for 6.403)
+INFO  22-08-06 16:39:49[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:39:49[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:39:49[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:39:56[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 22056 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:39:56[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:39:57[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:39:57[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 82 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:39:58[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:39:58[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:39:58[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:39:58[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:39:58[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:39:58[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2065 ms
+INFO  22-08-06 16:39:58[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:39:58[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:39:58[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:39:58[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:39:59[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:39:59[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:40:00[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:40:00[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:40:00[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:40:01[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4504a4ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ee3a2ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@73a1a1b4, org.springframework.security.web.header.HeaderWriterFilter@3225d950, org.springframework.security.web.authentication.logout.LogoutFilter@5759edff, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1831447c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7741507c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@230d013b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@38363e96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a30d1a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c39193f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35c95869, org.springframework.security.web.session.SessionManagementFilter@470a446f, org.springframework.security.web.access.ExceptionTranslationFilter@700202fa, org.springframework.security.web.access.intercept.AuthorizationFilter@6ad7a305]
+INFO  22-08-06 16:40:01[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:40:01[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:40:01[main] [SushiApplication:61] - Started SushiApplication in 6.126 seconds (JVM running for 6.994)
+INFO  22-08-06 16:40:02[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:40:02[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:40:02[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 0 ms
+WARN  22-08-06 16:40:02[http-nio-8080-exec-1] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [103] milliseconds.
+ERROR 22-08-06 16:40:03[http-nio-8080-exec-2] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+ERROR 22-08-06 16:40:18[http-nio-8080-exec-10] [AdminServiceImpl:37] - informationRepository 조회 오류
+ERROR 22-08-06 16:40:18[http-nio-8080-exec-10] [TemplateEngine:1136] - [THYMELEAF][http-nio-8080-exec-10] Exception processing template "admin/information": An error happened during template parsing (template: "class path resource [templates/admin/information.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/information.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1404)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1148)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1087)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:73)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "dto.adminId" (template: "admin/information" - line 10, col 72)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 98 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "dto.adminId" (template: "admin/information" - line 10, col 72)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 100 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'adminId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 125 common frames omitted
+ERROR 22-08-06 16:40:18[http-nio-8080-exec-10] [[dispatcherServlet]:175] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/admin/information.html]")] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'adminId' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1587)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1404)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1148)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1087)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilterInternal(AuthorizationFilter.java:73)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO  22-08-06 16:41:57[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:41:57[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:41:57[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:42:04[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 14784 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:42:04[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:42:05[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:42:05[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 121 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:42:06[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:42:06[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:42:06[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:42:06[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:42:06[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:42:06[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2098 ms
+INFO  22-08-06 16:42:07[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:42:07[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:42:07[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:42:07[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:42:07[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:42:07[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:42:08[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:42:08[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:42:09[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:42:09[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38363e96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35c95869, org.springframework.security.web.context.SecurityContextPersistenceFilter@39a30d1a, org.springframework.security.web.header.HeaderWriterFilter@470a446f, org.springframework.security.web.authentication.logout.LogoutFilter@7d2be319, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@37a0fc8c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1ba3c03d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d84b088, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@558aa1f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1958524b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e225c34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@361d8567, org.springframework.security.web.session.SessionManagementFilter@4942e6af, org.springframework.security.web.access.ExceptionTranslationFilter@65698020, org.springframework.security.web.access.intercept.AuthorizationFilter@bf18412]
+INFO  22-08-06 16:42:10[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:42:10[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:42:10[main] [SushiApplication:61] - Started SushiApplication in 6.088 seconds (JVM running for 6.894)
+INFO  22-08-06 16:42:10[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:42:10[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:42:10[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 22-08-06 16:42:11[http-nio-8080-exec-3] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:46:14[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:46:14[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:46:14[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:46:24[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 11404 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:46:24[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:46:25[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:46:25[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:46:26[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:46:26[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:46:26[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:46:26[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:46:26[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:46:26[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 1833 ms
+INFO  22-08-06 16:46:26[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:46:26[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:46:26[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:46:27[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:46:27[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:46:27[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:46:28[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:46:28[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:46:28[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:46:28[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41cf4272, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53d2b827, org.springframework.security.web.context.SecurityContextPersistenceFilter@470a446f, org.springframework.security.web.header.HeaderWriterFilter@65698020, org.springframework.security.web.authentication.logout.LogoutFilter@73fe7483, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@105fe81e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@af94b0b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@29fc83c5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4769537a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4942e6af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fc8047f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4504a4ed, org.springframework.security.web.session.SessionManagementFilter@3794b7b1, org.springframework.security.web.access.ExceptionTranslationFilter@58d79479, org.springframework.security.web.access.intercept.AuthorizationFilter@2dfd157b]
+INFO  22-08-06 16:46:29[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:46:29[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:46:29[main] [SushiApplication:61] - Started SushiApplication in 5.459 seconds (JVM running for 6.393)
+INFO  22-08-06 16:46:32[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:46:32[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:46:32[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+WARN  22-08-06 16:46:37[http-nio-8080-exec-7] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [294] milliseconds.
+ERROR 22-08-06 16:46:38[http-nio-8080-exec-9] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:48:59[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:48:59[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:48:59[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:49:10[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 16292 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:49:10[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:49:11[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:49:11[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 87 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:49:12[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:49:12[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:49:12[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:49:12[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:49:12[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:49:12[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 1774 ms
+INFO  22-08-06 16:49:12[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:49:13[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:49:13[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:49:13[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:49:13[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:49:13[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:49:14[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:49:14[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:49:14[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 16:49:15[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41cf4272, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53d2b827, org.springframework.security.web.context.SecurityContextPersistenceFilter@470a446f, org.springframework.security.web.header.HeaderWriterFilter@65698020, org.springframework.security.web.authentication.logout.LogoutFilter@73fe7483, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@105fe81e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@af94b0b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@29fc83c5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4769537a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4942e6af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fc8047f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4504a4ed, org.springframework.security.web.session.SessionManagementFilter@3794b7b1, org.springframework.security.web.access.ExceptionTranslationFilter@58d79479, org.springframework.security.web.access.intercept.AuthorizationFilter@2dfd157b]
+INFO  22-08-06 16:49:15[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:49:15[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 16:49:15[main] [SushiApplication:61] - Started SushiApplication in 5.712 seconds (JVM running for 6.569)
+INFO  22-08-06 16:49:16[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 16:49:16[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 16:49:16[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 0 ms
+WARN  22-08-06 16:49:16[http-nio-8080-exec-1] [SessionIdGeneratorBase:173] - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [746] milliseconds.
+ERROR 22-08-06 16:49:18[http-nio-8080-exec-3] [MemberServiceImpl:32] - 2099986584: memberRepository 조회 오류
+INFO  22-08-06 16:54:52[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:54:52[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:54:53[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:55:02[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 25420 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:55:02[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:55:03[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:55:04[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 138 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:55:04[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:55:04[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:55:04[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:55:04[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:55:05[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:55:05[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 2457 ms
+INFO  22-08-06 16:55:05[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:55:05[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:55:05[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:55:05[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:55:06[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:55:06[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:55:07[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:55:07[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:55:07[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+WARN  22-08-06 16:55:07[main] [AnnotationConfigServletWebServerApplicationContext:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\yena5\spring\sushi\build\classes\java\main\com\example\sushi\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+INFO  22-08-06 16:55:07[main] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:55:07[main] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:55:07[main] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:55:07[main] [StandardService:173] - Stopping service [Tomcat]
+INFO  22-08-06 16:55:07[main] [ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ERROR 22-08-06 16:55:08[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.sushi.controller.AdminController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+INFO  22-08-06 16:57:46[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 25636 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 16:57:46[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 16:57:47[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 16:57:47[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 116 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 16:57:48[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 16:57:48[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 16:57:48[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 16:57:48[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 16:57:48[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 16:57:48[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 1923 ms
+INFO  22-08-06 16:57:48[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 16:57:48[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 16:57:48[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 16:57:48[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 16:57:48[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 16:57:48[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 16:57:49[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 16:57:49[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 16:57:50[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+WARN  22-08-06 16:57:50[main] [AnnotationConfigServletWebServerApplicationContext:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController' defined in file [C:\Users\yena5\spring\sushi\build\classes\java\main\com\example\sushi\controller\AdminController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+INFO  22-08-06 16:57:50[main] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  22-08-06 16:57:50[main] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  22-08-06 16:57:50[main] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  22-08-06 16:57:50[main] [StandardService:173] - Stopping service [Tomcat]
+INFO  22-08-06 16:57:50[main] [ConditionEvaluationReportLoggingListener:136] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ERROR 22-08-06 16:57:50[main] [LoggingFailureAnalysisReporter:40] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.sushi.controller.AdminController required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+INFO  22-08-06 17:01:12[main] [SushiApplication:55] - Starting SushiApplication using Java 18.0.1 on DESKTOP-5DNAR4R with PID 24268 (C:\Users\yena5\spring\sushi\build\classes\java\main started by yena5 in C:\Users\yena5\spring\sushi)
+INFO  22-08-06 17:01:12[main] [SushiApplication:634] - No active profile set, falling back to 1 default profile: "default"
+INFO  22-08-06 17:01:13[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  22-08-06 17:01:13[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 89 ms. Found 6 JPA repository interfaces.
+INFO  22-08-06 17:01:14[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 8080 (http)
+INFO  22-08-06 17:01:14[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 17:01:14[main] [StandardService:173] - Starting service [Tomcat]
+INFO  22-08-06 17:01:14[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.65]
+INFO  22-08-06 17:01:14[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  22-08-06 17:01:14[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 1947 ms
+INFO  22-08-06 17:01:14[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  22-08-06 17:01:14[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.10.Final
+INFO  22-08-06 17:01:14[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  22-08-06 17:01:14[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  22-08-06 17:01:14[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  22-08-06 17:01:14[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  22-08-06 17:01:15[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  22-08-06 17:01:15[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  22-08-06 17:01:16[main] [JpaBaseConfiguration$JpaWebConfiguration:219] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  22-08-06 17:01:16[main] [DefaultSecurityFilterChain:55] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35c95869, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@558aa1f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@670ae31f, org.springframework.security.web.header.HeaderWriterFilter@55315a00, org.springframework.security.web.authentication.logout.LogoutFilter@35d3202b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@1ba3c03d, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@9a37591, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@69c0bae6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@361d8567, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@129aaac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d84b088, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fd6dfbc, org.springframework.security.web.session.SessionManagementFilter@73a1a1b4, org.springframework.security.web.access.ExceptionTranslationFilter@57617a75, org.springframework.security.web.access.intercept.AuthorizationFilter@5da2966]
+INFO  22-08-06 17:01:17[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-8080"]
+INFO  22-08-06 17:01:17[main] [TomcatWebServer:220] - Tomcat started on port(s): 8080 (http) with context path ''
+INFO  22-08-06 17:01:17[main] [SushiApplication:61] - Started SushiApplication in 5.531 seconds (JVM running for 6.323)
+INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  22-08-06 17:01:28[http-nio-8080-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+WARN  22-08-06 17:13:32[HikariPool-1 housekeeper] [HikariPool:788] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m47s806ms477µs).
