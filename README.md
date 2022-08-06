@@ -78,12 +78,12 @@ https://sushicaptain.com
             <a href="">회원별 예약 내역 조회 화면</a>
         </li>
         <li>
-            <a href="/src/main/resources/templates/admin/list.html">예약 내역 조회 화면</a>,
+            <a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/admin/list.html">예약 내역 조회 화면</a>,
             <a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/admin/read.html">예약별 상세 내역 조회 화면</a>
         </li>
         <li><a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/admin/menu.html">메뉴 변경 화면</a></li>
         <li><a href="menutype">메뉴 종류 변경 화면</a></li>
-        <li><a href="https://github.com/shinyena/sushi/blob/master/src/main/resources/templates/admin/information.html">관리자 정보 변경 화면</a></li>
+        <li><a href="/src/main/resources/templates/admin/information.html">관리자 정보 변경 화면</a></li>
     </ul>
 <br>    
 
