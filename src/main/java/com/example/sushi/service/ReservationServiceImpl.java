@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class ReservationServiceImpl implements ReservationService {
     private final MemberRepository memberRepository;
 
     @Override
-    public Long register(ReservationDTO reservationDTO) {
+    public void register(ReservationDTO reservationDTO) {
         Optional<Member> memberRepositoryById = memberRepository.findById(reservationDTO.getMid());
         Optional<ReserveTime> timeRepositoryById = timeRepository.findById(new ReserveTimeID(reservationDTO.getRdate(), reservationDTO.getRtime()));
 
@@ -42,8 +43,6 @@ public class ReservationServiceImpl implements ReservationService {
 
                 Reservation reservation = (Reservation) entityMap.get("reservation");
                 reservationRepository.save(reservation);
-
-                return reservationRepository.save(reservation).getRid();
             }
             else {
                 log.error(reservationDTO.getRdate() + reservationDTO.getRtime() + ": timeRepository 조회 오류");
@@ -52,43 +51,47 @@ public class ReservationServiceImpl implements ReservationService {
         else {
             log.error(reservationDTO.getRid() + ": memberRepository 조회 오류");
         }
-        return null;
     }
 
+    @Transactional
     @Override
-    public Long modify(ReservationDTO reservationDTO) {
+    public void modify(ReservationDTO reservationDTO) {
         Optional<Reservation> repositoryById = reservationRepository.findById(reservationDTO.getRid());
 
         if (repositoryById.isPresent()) {
             Reservation reservation = repositoryById.get();
+
+            /** reservation update (other) */
             reservation.changeName(reservationDTO.getName());
             reservation.changePhone(reservationDTO.getPhone());
             reservation.changeCount(reservationDTO.getCount());
             reservation.changeMessage(reservationDTO.getMessage());
             reservationRepository.save(reservation);
 
-            Optional<ReserveTime> timeRepositoryById = timeRepository.findById(new ReserveTimeID(
-                    reservationDTO.getRdate(), reservationDTO.getRtime()));
+            Optional<ReserveTime> timeRepositoryById = timeRepository.findById(
+                    new ReserveTimeID(reservationDTO.getRdate(), reservationDTO.getRtime()));
             if (!timeRepositoryById.isPresent()) {
+                /** reserveTime delete */
                 timeRepository.deleteById(new ReserveTimeID(
                         reservation.getReserveTime().getRdate(),
                         reservation.getReserveTime().getRtime()));
 
+                /** reserveTime insert */
                 ReserveTime reserveTime = ReserveTime.builder()
                         .rdate(reservationDTO.getRdate())
                         .rtime(reservationDTO.getRtime())
                         .build();
                 timeRepository.save(reserveTime);
 
+                /** reservation update (reserveTime) */
                 reservation.changeTime(reserveTime);
-                return reservationRepository.save(reservation).getRid();
+                reservationRepository.save(reservation);
             } else {
                 log.error(reservationDTO.getRdate() + reservationDTO.getRtime() + ": timeRepository 조회 오류");
             }
         } else {
             log.error(reservationDTO.getRid() + ": reservationRepository 조회 오류");
         }
-        return null;
     }
 
     @Override

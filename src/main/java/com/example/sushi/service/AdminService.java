@@ -12,11 +12,11 @@ public interface AdminService {
 
     /** Information Service */
     InformationDTO getInformation(String adminId);          // 레스토랑 정보 조회
-    String modifyInformation(InformationDTO informationDTO);  // 레스토랑 정보 수정
+    void modifyInformation(InformationDTO informationDTO);  // 레스토랑 정보 수정
 
     /** Menu Service */
-    Long registerMenu(MenuDTO menuDTO);                     // 메뉴 등록
-    Long modifyMenu(MenuDTO menuDTO);                       // 메뉴 수정
+    void registerMenu(MenuDTO menuDTO);                     // 메뉴 등록
+    void modifyMenu(MenuDTO menuDTO);                       // 메뉴 수정
     void removeMenu(Long menuId);                           // 메뉴 삭제
     List<MenuDTO> getAllMenu();                             // 전체 메뉴 조회
     MenuDTO getOneMenu(Long menuId);                        // 개별 메뉴 조회

@@ -5,10 +5,7 @@
         <h1 class="mt-4">Reservation Read Page</h1>
 
         <form>
-            <div class="form-group">
-                <label>이메일</label>
-                <input type="text" class="form-control" name="email" th:value="${dto.email}" readonly>
-            </div>
+            <input type="hidden" class="form-control" name="email" th:value="${dto.mid}" readonly>
 
             <div class="form-group">
                 <label>예약자</label>

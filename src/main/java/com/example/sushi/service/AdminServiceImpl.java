@@ -41,7 +41,7 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public String modifyInformation(InformationDTO informationDTO) {
+    public void modifyInformation(InformationDTO informationDTO) {
         Optional<Information> byId = informationRepository.findById(informationDTO.getAdminId());
         if (byId.isPresent()) {
             Information information = byId.get();
@@ -57,19 +57,17 @@ public class AdminServiceImpl implements AdminService{
             information.changeContent2(informationDTO.getContent2());
             information.changeContent3(informationDTO.getContent3());
             information.changeNotice(informationDTO.getNotice());
-            return informationRepository.save(information).getAdminId();
+            informationRepository.save(information);
         } else {
             log.error("informationRepository 조회 오류");
         }
-        return null;
-
     }
 
     @Override
-    public Long registerMenu(MenuDTO menuDTO) {
+    public void registerMenu(MenuDTO menuDTO) {
         MenuType menuType = menuTypeRepository.findMenuTypeByType(menuDTO.getMenuType());
         Menu menu = dtoToMenu(menuDTO, menuType);
-        return menuRepository.save(menu).getMenuId();
+        menuRepository.save(menu);
     }
 
     @Override
@@ -97,7 +95,7 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public Long modifyMenu(@RequestBody MenuDTO menuDTO) {
+    public void modifyMenu(@RequestBody MenuDTO menuDTO) {
         MenuType menuType = menuTypeRepository.findMenuTypeByType(menuDTO.getMenuType());
         Optional<Menu> byId = menuRepository.findById(menuDTO.getMenuId());
         if (byId.isPresent()) {
@@ -106,11 +104,10 @@ public class AdminServiceImpl implements AdminService{
             menu.changeMenuComment(menuDTO.getMenuComment());
             menu.changeMenuPrice(menuDTO.getMenuPrice());
             menu.changeMenuType(menuType);
-            return menuRepository.save(menu).getMenuId();
+            menuRepository.save(menu);
         } else {
             log.error("menuRepository 조회 오류");
         }
-        return null;
     }
 
     @Override

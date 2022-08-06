@@ -20,30 +20,30 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 
     @Override
-    public Long register(Long mid) {
+    public void register(Long mid) {
         Optional<Member> byId = memberRepository.findById(mid);
         if (!byId.isPresent()) {
             Member member = Member.builder()
                     .mid(mid)
                     .memberRole(MemberRole.USER)
                     .build();
-            return memberRepository.save(member).getMid();
+            memberRepository.save(member);
+        } else {
+            log.error(mid + ": memberRepository 조회 오류");
         }
-        return null;
     }
 
     @Override
-    public Long modify(ReservationDTO reservationDTO) {
+    public void modify(ReservationDTO reservationDTO) {
         Optional<Member> byId = memberRepository.findById(reservationDTO.getMid());
         if (byId.isPresent()) {
             Member member = byId.get();
             member.changeName(reservationDTO.getName());
             member.changePhone(reservationDTO.getPhone());
-            return memberRepository.save(member).getMid();
+            memberRepository.save(member);
         }
         else {
             log.error(reservationDTO.getRid() + ": memberRepository 조회 오류");
-            return null;
         }
     }
 

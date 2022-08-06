@@ -22,9 +22,9 @@
                 <div class="tab-content">
                     <div class="tab-pane" th:each="dto, iter: ${dtoList}" th:id="|tab-${iter.index}|">
                         <form class="php-email-form" th:action="@{/sushi/modify}" th:method="post">
-                            <input type="hidden" class="form-control" name="rid" th:value="${dto.rid}" readonly>
+                            <input type="hidden" class="form-control" name="rid" th:value="${dto.rid}">
+                            <input type="hidden" class="form-control" name="mid" th:value="${dto.mid}">
                             <div class="row">
-                                <input type="hidden" class="form-control" name="mid" th:value="${dto.mid}">
                                 <div class="col-lg-6 form-group mt-3">
                                     <label>예약자</label>
                                     <input type="text" class="form-control" name="name" th:value="${dto.name}" required>

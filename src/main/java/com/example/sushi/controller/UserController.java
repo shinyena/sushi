@@ -58,7 +58,7 @@ public class UserController {
     @LoginCheck
     @GetMapping("/list")
     public void getAllReservation(HttpSession session, Model model) {
-        Long kakaoID = (Long) session.getAttribute("userId");
+        Long kakaoID = (Long) session.getAttribute("kakaoID");
         List<ReservationDTO> dtoList = reservationService.getList(kakaoID);
         model.addAttribute("dtoList", dtoList);
         InformationDTO information = adminService.getInformation(adminId);
@@ -69,8 +69,8 @@ public class UserController {
     @PostMapping("/modify")
     public String modifyReservation(ReservationDTO reservationDTO,
                                     RedirectAttributes redirectAttributes) {
-        reservationService.modify(reservationDTO);
         memberService.modify(reservationDTO);
+        reservationService.modify(reservationDTO);
         redirectAttributes.addFlashAttribute("msg", "예약이 변경 되었습니다.");
         return "redirect:/sushi/list#specials";
     }

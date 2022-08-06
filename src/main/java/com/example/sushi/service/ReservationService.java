@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface ReservationService {
-    Long register(ReservationDTO reservationDTO);   // 예약 등록
-    Long modify(ReservationDTO reservationDTO);     // 예약 수정
+    void register(ReservationDTO reservationDTO);   // 예약 등록
+    void modify(ReservationDTO reservationDTO);     // 예약 수정
     void remove(Long rid);                          // 예약 삭제
 
     List<ReservationDTO> getAll();                  // 전체 예약 조회
