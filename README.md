@@ -1,5 +1,5 @@
 # 레스토랑 예약 프로그램
-https://sushicaptain.com
+http://sushicaptain.com
 - Server: Java, Spring, MariaDB, Amzaon EC2
 - Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
