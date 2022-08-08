@@ -19,7 +19,7 @@ https://sushicaptain.com <br><br>
 - [MenuDTO](/src/main/java/com/example/sushi/dto/admin/MenuDTO.java):
 [Menu](/src/main/java/com/example/sushi/entity/admin/Menu.java),
 [MenuType](/src/main/java/com/example/sushi/entity/admin/MenuType.java)
-
+---
 
 ## Service
 ### [MemberService](/src/main/java/com/example/sushi/service/MemberServiceImpl.java)
@@ -34,7 +34,7 @@ https://sushicaptain.com <br><br>
 - 메뉴 등록, 메뉴 수정, 메뉴 삭제
 - 전체 메뉴 조회, 개별 메뉴 조회
 - 메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)
-
+---
 
 ## View
 ### 사용자 화면
@@ -59,7 +59,7 @@ https://sushicaptain.com <br><br>
 - [메뉴 변경 화면](/src/main/resources/templates/admin/menu.html),
 [메뉴 종류 변경 화면(개발 예정)](/src/main/resources/templates/admin/menutype.html)
 - [관리자 정보 변경 화면](/src/main/resources/templates/admin/information.html)
-
+---
 
 
 ## etc
