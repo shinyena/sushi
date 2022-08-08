@@ -4,8 +4,8 @@ https://sushicaptain.com <br><br>
 - Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
 ## Entity&DTO
+![](/readmeImg/erd.png)
 ### 사용자
-![](/readmeImg/usererd.png)
 - [MemberDTO](/src/main/java/com/example/sushi/dto/user/MemberDTO.java):
 [Member](/src/main/java/com/example/sushi/entity/user/Member.java),
 [MemberRole](/src/main/java/com/example/sushi/entity/user/MemberRole.java)
@@ -14,7 +14,6 @@ https://sushicaptain.com <br><br>
 [ReseveTime](/src/main/java/com/example/sushi/entity/user/ReserveTime.java)
     
 ### 관리자
-![](/readmeImg/adminerd.png)
 - [InformationDTO](/src/main/java/com/example/sushi/dto/admin/InformationDTO.java):
 [Information](/src/main/java/com/example/sushi/entity/admin/Information.java)
 - [MenuDTO](/src/main/java/com/example/sushi/dto/admin/MenuDTO.java):
