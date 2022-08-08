@@ -37,18 +37,14 @@ https://sushicaptain.com <br><br>
 
 ## View
 ### 사용자 화면
-![](/readmeImg/main.png)
+![](/readmeImg/user.png)
 - [메인화면](/src/main/resources/templates/sushi/main.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [레스토랑 메뉴](/src/main/resources/templates/sushi/fragment/menu.html),
 [레스토랑 정보](/src/main/resources/templates/sushi/fragment/contact.html)
-
-![](/readmeImg/register.png)
 - [예약 등록 화면](/src/main/resources/templates/sushi/register.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [예약 등록](/src/main/resources/templates/sushi/fragment/book.html)
-
-![](/readmeImg/list.png)
 - [예약 조회 화면](/src/main/resources/templates/sushi/register.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [예약 조회](/src/main/resources/templates/sushi/fragment/special.html)
