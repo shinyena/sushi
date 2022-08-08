@@ -1,9 +1,7 @@
 <h1>레스토랑 예약 프로그램</h1>
-<li>https://sushicaptain.com</li>
-<li>Server: Java, Spring, MariaDB, Amzaon EC2</li>
-<li>Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf</li>
-
-
+https://sushicaptain.com <br>
+Server: Java, Spring, MariaDB, Amzaon EC2 <br>
+Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf <br>
 
 <h2>Entity&DTO</h2>
     <h3>사용자</h3>
