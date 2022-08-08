@@ -78,3 +78,10 @@
 ### 에러 처리
 - controller: [CustomErrorController](/src/main/java/com/example/sushi/controller/CustomErrorController.java)
 - [error.html](/src/main/resources/templates/error.html)    
+
+|Error Code|Message|
+|:---:|:---:|
+|401|로그인 필요|
+|403|관리자 권한 필요|
+|601|이미 예약된 일자|
+|602|이미 예약된 시간|
