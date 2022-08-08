@@ -3,7 +3,7 @@ https://sushicaptain.com <br><br>
 - Server: Java, Spring, MariaDB, Amzaon EC2
 - Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
-####
+###
 ## Entity&DTO
 ![](/readmeImg/erd.png)
 ### 사용자
@@ -21,7 +21,7 @@ https://sushicaptain.com <br><br>
 [Menu](/src/main/java/com/example/sushi/entity/admin/Menu.java),
 [MenuType](/src/main/java/com/example/sushi/entity/admin/MenuType.java) 
 
-####
+###
 ## Service
 ### [MemberService](/src/main/java/com/example/sushi/service/MemberServiceImpl.java)
 - 회원 등록, 회원 수정, 회원 삭제
@@ -36,7 +36,7 @@ https://sushicaptain.com <br><br>
 - 전체 메뉴 조회, 개별 메뉴 조회
 - 메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)
 
-####
+###
 ## View
 ### 사용자 화면
 ![](/readmeImg/user.png)
@@ -61,7 +61,7 @@ https://sushicaptain.com <br><br>
 [메뉴 종류 변경 화면(개발 예정)](/src/main/resources/templates/admin/menutype.html)
 - [관리자 정보 변경 화면](/src/main/resources/templates/admin/information.html)
 
-####
+###
 ## etc
 ### 로그인
 - annotation: [LoginCheckAspect](/src/main/java/com/example/sushi/annotation/LoginCheckAspect.java)
