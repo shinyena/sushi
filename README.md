@@ -62,6 +62,7 @@ https://sushicaptain.com <br><br>
 - [관리자 정보 변경 화면](/src/main/resources/templates/admin/information.html)
 
 ###
+###
 ## etc
 ### 로그인
 - annotation: [LoginCheckAspect](/src/main/java/com/example/sushi/annotation/LoginCheckAspect.java)
