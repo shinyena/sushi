@@ -1,11 +1,11 @@
-<h1>레스토랑 예약 프로그램</h1>
+# 레스토랑 예약 프로그램
 https://sushicaptain.com <br><br>
-Server | Java, Spring, MariaDB, Amzaon EC2
-Client | HTML, CSS, Javascript, Bootstrap, Thymeleaf
+- Server: Java, Spring, MariaDB, Amzaon EC2
+- Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
-##Entity&DTO
-###사용자
-![](C:\Users\yena5\OneDrive\사진\usererd.png)
+## Entity&DTO
+### 사용자
+![](/readmeImg/usererd.png)
 - [MemberDTO](/src/main/java/com/example/sushi/dto/user/MemberDTO.java):
 [Member](/src/main/java/com/example/sushi/entity/user/Member.java),
 [MemberRole](/src/main/java/com/example/sushi/entity/user/MemberRole.java)
@@ -13,16 +13,16 @@ Client | HTML, CSS, Javascript, Bootstrap, Thymeleaf
 [Reservation](/src/main/java/com/example/sushi/entity/user/Reservation.java),
 [ReseveTime](/src/main/java/com/example/sushi/entity/user/ReserveTime.java)
     
-###관리자
-![](C:\Users\yena5\OneDrive\사진\adminerd.png)
+### 관리자
+![](/readmeImg/adminerd.png)
 - [InformationDTO](/src/main/java/com/example/sushi/dto/admin/InformationDTO.java):
 [Information](/src/main/java/com/example/sushi/entity/admin/Information.java)
 - [MenuDTO](/src/main/java/com/example/sushi/dto/admin/MenuDTO.java):
 [Menu](/src/main/java/com/example/sushi/entity/admin/Menu.java),
 [MenuType](/src/main/java/com/example/sushi/entity/admin/MenuType.java)
 
-##Service
-###[MemberService](/src/main/java/com/example/sushi/service/MemberServiceImpl.java)
+## Service
+### [MemberService](/src/main/java/com/example/sushi/service/MemberServiceImpl.java)
 - 회원 등록, 회원 수정, 회원 삭제
 - 전체 회원 정보 조회, 개별 회원 정보 조회
 ### [ReservationService](/src/main/java/com/example/sushi/service/ReservationServiceImpl.java)
@@ -37,24 +37,24 @@ Client | HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
 ## View
 ### 사용자 화면
-![](C:\Users\yena5\OneDrive\사진\main.png)
+![](/readmeImg/main.png)
 - [메인화면](/src/main/resources/templates/sushi/main.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [레스토랑 메뉴](/src/main/resources/templates/sushi/fragment/menu.html),
 [레스토랑 정보](/src/main/resources/templates/sushi/fragment/contact.html)
 
-![](C:\Users\yena5\OneDrive\사진\register.png)
+![](/readmeImg/register.png)
 - [예약 등록 화면](/src/main/resources/templates/sushi/register.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [예약 등록](/src/main/resources/templates/sushi/fragment/book.html)
 
-![](C:\Users\yena5\OneDrive\사진\list.png)
+![](/readmeImg/list.png)
 - [예약 조회 화면](/src/main/resources/templates/sushi/register.html):
 [레스토랑 배너](/src/main/resources/templates/sushi/fragment/hero.html),
 [예약 조회](/src/main/resources/templates/sushi/fragment/special.html)
 
 ### 관리자 화면
-![](C:\Users\yena5\OneDrive\사진\admin.png)
+![](/readmeImg/admin.png)
 - [예약 내역 조회 화면](/src/main/resources/templates/admin/reservation.html),
 [예약별 상세 내역 조회 화면](/src/main/resources/templates/admin/read.html)
 - [회원 내역 조회 화면](/src/main/resources/templates/admin/member.html),
