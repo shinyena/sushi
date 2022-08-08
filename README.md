@@ -1,7 +1,7 @@
 # 레스토랑 예약 프로그램
 https://sushicaptain.com
 - Server: Java, Spring, MariaDB, Amzaon EC2
-- Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf<br>
+- Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
 
 
 ## Entity&DTO
@@ -19,7 +19,7 @@ https://sushicaptain.com
 [Information](/src/main/java/com/example/sushi/entity/admin/Information.java)
 - [MenuDTO](/src/main/java/com/example/sushi/dto/admin/MenuDTO.java):
 [Menu](/src/main/java/com/example/sushi/entity/admin/Menu.java),
-[MenuType](/src/main/java/com/example/sushi/entity/admin/MenuType.java)<br> 
+[MenuType](/src/main/java/com/example/sushi/entity/admin/MenuType.java)
 
 ## Service
 ### [MemberService](/src/main/java/com/example/sushi/service/MemberServiceImpl.java)
@@ -33,7 +33,7 @@ https://sushicaptain.com
 - 레스토랑 정보 조회, 레스토랑 정보 수정
 - 메뉴 등록, 메뉴 수정, 메뉴 삭제
 - 전체 메뉴 조회, 개별 메뉴 조회
-- 메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)<br>
+- 메뉴 종류 등록, 메뉴 종류 수정, 메뉴 종류 삭제, 메뉴 종류 조회 (개발 예정)
 
 ## View
 ### 사용자 화면
@@ -57,7 +57,7 @@ https://sushicaptain.com
 [회원별 예약 내역 조회 화면](/src/main/resources/templates/admin/list.html)
 - [메뉴 변경 화면](/src/main/resources/templates/admin/menu.html),
 [메뉴 종류 변경 화면(개발 예정)](/src/main/resources/templates/admin/menutype.html)
-- [관리자 정보 변경 화면](/src/main/resources/templates/admin/information.html)<br>
+- [관리자 정보 변경 화면](/src/main/resources/templates/admin/information.html)
 
 ## etc
 ### 로그인
