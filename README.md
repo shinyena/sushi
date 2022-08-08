@@ -1,7 +1,17 @@
 # 레스토랑 예약 프로그램
-http://sushicaptain.com
-- Server: Java, Spring, MariaDB, Amzaon EC2
-- Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf
+:globe_with_meridians: http://sushicaptain.com
+
+- Server:
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=Java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white"/>
+- Client:
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=thymeleaf&logoColor=white"/>
 
 
 ## Entity&DTO
