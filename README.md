@@ -1,6 +1,21 @@
 <h1>레스토랑 예약 프로그램</h1>
 https://sushicaptain.com
+
+<h2>개요</h2>
+<ul>    
+    <li>개발 동기: 일식 레스토랑에서 아르바이트 하던 중, 
+    고립된 매장의 위치와 협소한 좌석 및 코로나 발생 등으로 인해 
+    특정 시간에만 손님이 몰리는 현상이 발생하여 
+    이로 인한 손실을 극복하기 위해 자체 예약 프로그램 개발</li>
+    <li>사용 기술:
+        <ul>
+            <li>Server: Java, Spring, MariaDB, Amzaon EC2</li>
+            <li>Client: HTML, CSS, Javascript, Bootstrap, Thymeleaf</li>
+        </ul>
+    </li>    
+</ul>
 <br>
+
 
 <h2>Entity&DTO</h2>
     <h3>사용자</h3>
