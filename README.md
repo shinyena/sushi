@@ -1,5 +1,5 @@
 # 레스토랑 예약 프로그램
-- :globe_with_meridians: http://sushicaptain.com
+:globe_with_meridians: http://sushicaptain.com
 - Server:
   <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=Java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/>
